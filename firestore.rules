@@ -1,0 +1,64 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // ===============================================================
+    // Assumed Data Model
+    // ===============================================================
+    //
+    // Collection: posts
+    // Document ID: auto-generated or slug
+    // Fields:
+    //   - id: string (required)
+    //   - title: string (required)
+    //   - excerpt: string (required)
+    //   - content: string (required)
+    //   - author: string (required)
+    //   - date: string (required)
+    //   - category: string (required)
+    //   - imageUrl: string (required)
+    //   - readTime: string (required)
+    //   - status: string (required, enum: ['published', 'draft'])
+    //
+    // Collection: comments
+    // Document ID: auto-generated
+    // Fields:
+    //   - id: string (required)
+    //   - postId: string (required)
+    //   - authorName: string (required)
+    //   - authorEmail: string (required)
+    //   - content: string (required)
+    //   - date: string (required)
+    //   - isApproved: bool (required)
+    //
+    // ===============================================================
+
+    // Helper Functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isAuthenticated() && 
+        (request.auth.token.email == "netbiz0925@gmail.com" && request.auth.token.email_verified == true);
+    }
+
+    function isValidPost(data) {
+      return data.keys().hasAll(['id', 'title', 'content', 'author', 'date', 'category', 'status']) &&
+             data.title is string && data.title.size() > 0 && data.title.size() < 200 &&
+             data.content is string && data.content.size() > 0 &&
+             data.status in ['published', 'draft'];
+    }
+
+    function isValidComment(data) {
+      return data.keys().hasAll(['id', 'postId', 'authorName', 'content', 'date', 'isApproved']) &&
+             data.authorName is string && data.authorName.size() > 0 && data.authorName.size() < 100 &&
+             data.content is string && data.content.size() > 0 && data.content.size() < 1000 &&
+             data.isApproved is bool;
+    }
+
+    // Rules
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+}

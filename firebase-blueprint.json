@@ -1,0 +1,47 @@
+{
+  "entities": {
+    "Post": {
+      "title": "Post",
+      "description": "A news article post",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "excerpt": { "type": "string" },
+        "content": { "type": "string" },
+        "author": { "type": "string" },
+        "date": { "type": "string" },
+        "category": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "readTime": { "type": "string" },
+        "status": { "type": "string", "enum": ["published", "draft"] }
+      },
+      "required": ["id", "title", "content", "author", "date", "category", "status"]
+    },
+    "Comment": {
+      "title": "Comment",
+      "description": "A comment on a post",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "postId": { "type": "string" },
+        "authorName": { "type": "string" },
+        "authorEmail": { "type": "string" },
+        "content": { "type": "string" },
+        "date": { "type": "string" },
+        "isApproved": { "type": "boolean" }
+      },
+      "required": ["id", "postId", "authorName", "content", "date", "isApproved"]
+    }
+  },
+  "firestore": {
+    "/posts/{postId}": {
+      "schema": "Post",
+      "description": "Collection of news articles"
+    },
+    "/comments/{commentId}": {
+      "schema": "Comment",
+      "description": "Collection of comments on articles"
+    }
+  }
+}
