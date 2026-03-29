@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Allow: /post/
+Allow: /category/
+Allow: /about
+
+Disallow: /admin
+Disallow: /admin/
+Disallow: /adminlogin
+Disallow: /login
+
+Sitemap: https://thenationseyes.com/sitemap.xml

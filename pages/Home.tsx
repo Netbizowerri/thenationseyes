@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Post, Category } from '../types';
 import ArticleCard from '../components/ArticleCard';
 import HeroSlider from '../components/HeroSlider';
+import SEO from '../components/SEO';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 
 import { firebaseService } from '../services/firebaseService';
@@ -14,6 +15,9 @@ const CompactArticleCard: React.FC<{ post: Post }> = ({ post }) => (
         src={post.imageUrl} 
         alt={post.title} 
         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        width={112}
+        height={96}
+        loading="lazy"
       />
     </div>
     <div className="flex-1 min-w-0">
@@ -60,7 +64,6 @@ const Home: React.FC = () => {
     } else {
       setFilter('All');
     }
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [categoryName]);
 
   const handleFilterClick = (cat: string) => {
@@ -79,8 +82,34 @@ const Home: React.FC = () => {
   const remainingPosts = filter === 'All' ? posts : filteredPosts;
   const politicsPosts = posts.filter(p => p.category === Category.POLITICS).slice(0, 6);
 
+  const isCategory = !!categoryName;
+  const seoTitle = isCategory ? `${categoryName} News & Analysis` : 'Nigerian News, Politics & Editorial Analysis';
+  const seoDesc = isCategory
+    ? `Latest ${categoryName} news, analysis, and opinion from The Nation's Eyes. In-depth reporting on Nigerian ${categoryName.toLowerCase()} matters.`
+    : "The Nation's Eyes delivers in-depth Nigerian news, political analysis, and editorial commentary. Unveiling truths, shaping perspectives.";
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: "The Nation's Eyes",
+    url: 'https://thenationseyes.com',
+    description: "Nigerian news, politics, and editorial analysis.",
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: 'https://thenationseyes.com/?s={search_term_string}',
+      'query-input': 'required name=search_term_string',
+    },
+  };
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 md:py-16">
+      <SEO
+        title={seoTitle}
+        description={seoDesc}
+        path={isCategory ? `/category/${categoryName}` : '/'}
+        type="website"
+        jsonLd={jsonLd}
+      />
       {/* Hero Slider Section - Hidden on category archive pages */}
       {filter === 'All' && heroPosts.length > 0 && !categoryName && (
         <div className="animate-in fade-in zoom-in-95 duration-700">

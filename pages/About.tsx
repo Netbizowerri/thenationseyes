@@ -1,9 +1,31 @@
 
 import React from 'react';
+import SEO from '../components/SEO';
 
 const About: React.FC = () => {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    name: 'About NZE Noel Chiagorom',
+    description: 'Learn about NZE Noel Chiagorom, Nigerian traditional leader, publisher of The Nation\'s Eyes News Commentaries.',
+    mainEntity: {
+      '@type': 'Person',
+      name: 'NZE Noel Chiagorom',
+      jobTitle: 'Publisher & Traditional Leader',
+      description: 'Nigerian traditional leader, public affairs analyst, author, and media publisher.',
+      url: 'https://thenationseyes.com/about',
+    },
+  };
+
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24">
+      <SEO
+        title="About The Publisher"
+        description="Meet NZE Noel Chiagorom — Nigerian traditional leader, author, and publisher of The Nation's Eyes News Commentaries, a platform for governance and social justice."
+        path="/about"
+        type="website"
+        jsonLd={jsonLd}
+      />
       <div className="animate-in fade-in slide-in-from-bottom-8 duration-1000">
         {/* Header Section */}
         <div className="text-center mb-16">
@@ -23,9 +45,11 @@ const About: React.FC = () => {
               <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border-8 border-white shadow-2xl shadow-slate-200/50 transform -rotate-2 group-hover:rotate-0 transition-transform duration-700">
                 <img 
                   src="https://i.ibb.co/J4rCTZG/598621592-25338159849137619-4297002845697941508-n.jpg" 
-                  alt="NZE Noel Chiagorom" 
+                  alt="Portrait of NZE Noel Chiagorom, Nigerian traditional leader and publisher" 
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
+                  width={400}
+                  height={533}
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-red-600 rounded-full flex items-center justify-center text-white shadow-xl shadow-red-200 transform rotate-12">

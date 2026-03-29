@@ -24,6 +24,9 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ post, isHero }) => {
           src={post.imageUrl} 
           alt={post.title} 
           className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-60 group-hover:opacity-100"
+          width={1200}
+          height={500}
+          loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
         <div className="absolute top-6 right-6 flex gap-2">
@@ -67,6 +70,9 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ post, isHero }) => {
           src={post.imageUrl} 
           alt={post.title} 
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          width={800}
+          height={450}
+          loading="lazy"
         />
         <div className="absolute top-4 left-4 flex gap-2">
            <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-slate-900 text-[9px] font-black uppercase tracking-widest rounded-full shadow-lg">

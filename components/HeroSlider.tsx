@@ -60,7 +60,10 @@ const HeroSlider: React.FC<HeroSliderProps> = ({ posts }) => {
         <img 
           src={prevPost.imageUrl} 
           className="w-full h-full object-cover opacity-40 scale-100"
-          alt=""
+          alt={prevPost.title}
+          width={1200}
+          height={500}
+          loading="eager"
         />
       </div>
 

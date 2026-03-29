@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Post, Comment } from '../types';
 import { firebaseService } from '../services/firebaseService';
+import SEO from '../components/SEO';
 
 const sanitizeInput = (input: string): string => {
   return input
@@ -70,7 +71,6 @@ const ArticleDetail: React.FC = () => {
         unsubscribeComments();
       };
     }
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [id]);
 
   const handleCommentSubmit = async (e: React.FormEvent) => {
@@ -127,13 +127,51 @@ const ArticleDetail: React.FC = () => {
 
   if (!post) return (
     <div className="p-40 text-center animate-pulse">
+      <SEO title="Loading Article" description="Loading article..." path="/" />
       <div className="w-16 h-16 bg-slate-100 rounded-full mx-auto mb-4"></div>
       <p className="text-slate-400 font-black uppercase tracking-widest text-xs">Opening Archives...</p>
     </div>
   );
 
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.excerpt,
+    image: post.imageUrl,
+    author: {
+      '@type': 'Person',
+      name: post.author,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: "The Nation's Eyes",
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://thenationseyes.com/logo.png',
+      },
+    },
+    datePublished: post.date,
+    dateModified: post.date,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://thenationseyes.com/post/${post.id}`,
+    },
+  };
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+      <SEO
+        title={post.title}
+        description={post.excerpt}
+        path={`/post/${post.id}`}
+        image={post.imageUrl}
+        type="article"
+        author={post.author}
+        publishedTime={post.date}
+        section={post.category}
+        jsonLd={articleJsonLd}
+      />
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 xl:gap-20">
         
         {/* Main Content Column (75%) */}
@@ -148,7 +186,7 @@ const ArticleDetail: React.FC = () => {
               </h1>
               <div className="flex items-center space-x-6 text-slate-400 text-[10px] font-black uppercase tracking-[0.3em]">
                 <div className="flex items-center">
-                  <img src={`https://ui-avatars.com/api/?name=${post.author}&background=000&color=fff&bold=true`} className="w-12 h-12 rounded-full mr-4 border-2 border-slate-100 shadow-sm" alt={post.author} />
+                  <img src={`https://ui-avatars.com/api/?name=${encodeURIComponent(post.author)}&background=000&color=fff&bold=true`} className="w-12 h-12 rounded-full mr-4 border-2 border-slate-100 shadow-sm" alt={`${post.author} avatar`} width={48} height={48} />
                   <div className="text-left">
                     <p className="text-slate-900 text-sm font-black">{post.author}</p>
                     <p>{new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
@@ -160,7 +198,7 @@ const ArticleDetail: React.FC = () => {
             </header>
 
             <div className="relative mb-16 group">
-              <img src={post.imageUrl} className="w-full h-auto min-h-[400px] object-cover rounded-[3rem] shadow-2xl transition-transform duration-700 group-hover:scale-[1.01]" alt={post.title} />
+              <img src={post.imageUrl} className="w-full h-auto min-h-[400px] object-cover rounded-[3rem] shadow-2xl transition-transform duration-700 group-hover:scale-[1.01]" alt={`Featured image for: ${post.title}`} width={1200} height={630} loading="eager" />
               <div className="absolute inset-0 rounded-[3rem] ring-1 ring-inset ring-black/10"></div>
             </div>
 
@@ -249,7 +287,7 @@ const ArticleDetail: React.FC = () => {
                 <Link key={rPost.id} to={`/post/${rPost.id}`} className="group block no-underline">
                   <div className="flex gap-4 items-start">
                     <div className="w-20 h-20 rounded-2xl overflow-hidden flex-shrink-0 shadow-sm group-hover:shadow-md transition-shadow">
-                      <img src={rPost.imageUrl} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt={rPost.title} />
+                      <img src={rPost.imageUrl} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt={rPost.title} width={80} height={80} loading="lazy" />
                     </div>
                     <div className="flex-1">
                       <h4 className="text-[13px] font-black leading-tight text-slate-800 group-hover:text-red-600 transition-colors uppercase line-clamp-2">

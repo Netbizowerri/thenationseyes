@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation, Navigate } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import Home from './pages/Home';
 import ArticleDetail from './pages/ArticleDetail';
 import AdminDashboard from './pages/AdminDashboard';
@@ -8,6 +9,7 @@ import AdminPosts from './pages/AdminPosts';
 import AdminComments from './pages/AdminComments';
 import Login from './pages/Login';
 import About from './pages/About';
+import ScrollToTop from './components/ScrollToTop';
 import { firebaseService } from './services/firebaseService';
 import { auth } from './firebase';
 import { onAuthStateChanged, User as FirebaseUser } from 'firebase/auth';
@@ -387,21 +389,24 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <ErrorBoundary>
-      <Router>
-        <Routes>
-          <Route path="/" element={<PublicLayout><Home /></PublicLayout>} />
-          <Route path="/category/:categoryName" element={<PublicLayout><Home /></PublicLayout>} />
-          <Route path="/post/:id" element={<PublicLayout><ArticleDetail /></PublicLayout>} />
-          <Route path="/about" element={<PublicLayout><About /></PublicLayout>} />
-          <Route path="/adminlogin" element={<Login />} />
-          <Route path="/admin" element={<AdminLayout><AdminDashboard /></AdminLayout>} />
-          <Route path="/admin/posts" element={<AdminLayout><AdminPosts /></AdminLayout>} />
-          <Route path="/admin/comments" element={<AdminLayout><AdminComments /></AdminLayout>} />
-          <Route path="/login" element={<Navigate to="/adminlogin" replace />} />
-        </Routes>
-      </Router>
-    </ErrorBoundary>
+    <HelmetProvider>
+      <ErrorBoundary>
+        <Router>
+          <ScrollToTop />
+          <Routes>
+            <Route path="/" element={<PublicLayout><Home /></PublicLayout>} />
+            <Route path="/category/:categoryName" element={<PublicLayout><Home /></PublicLayout>} />
+            <Route path="/post/:id" element={<PublicLayout><ArticleDetail /></PublicLayout>} />
+            <Route path="/about" element={<PublicLayout><About /></PublicLayout>} />
+            <Route path="/adminlogin" element={<Login />} />
+            <Route path="/admin" element={<AdminLayout><AdminDashboard /></AdminLayout>} />
+            <Route path="/admin/posts" element={<AdminLayout><AdminPosts /></AdminLayout>} />
+            <Route path="/admin/comments" element={<AdminLayout><AdminComments /></AdminLayout>} />
+            <Route path="/login" element={<Navigate to="/adminlogin" replace />} />
+          </Routes>
+        </Router>
+      </ErrorBoundary>
+    </HelmetProvider>
   );
 };
 
