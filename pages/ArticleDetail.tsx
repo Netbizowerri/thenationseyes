@@ -2,9 +2,21 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Post, Comment } from '../types';
-import { storageService } from '../services/storageService';
-
 import { firebaseService } from '../services/firebaseService';
+
+const sanitizeInput = (input: string): string => {
+  return input
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#x27;')
+    .trim();
+};
+
+const validateEmail = (email: string): boolean => {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+};
 
 const AdPlaceholder: React.FC<{ size: string; label?: string }> = ({ size, label = "Advertisement" }) => (
   <div className="bg-slate-100 border border-slate-200 rounded-2xl flex flex-col items-center justify-center p-6 mb-8 transition-all hover:bg-slate-200/50 group">
@@ -65,12 +77,20 @@ const ArticleDetail: React.FC = () => {
     e.preventDefault();
     if (!id) return;
 
+    const sanitizedName = sanitizeInput(newComment.name);
+    const sanitizedEmail = sanitizeInput(newComment.email);
+    const sanitizedContent = sanitizeInput(newComment.content);
+
+    if (!sanitizedName || !sanitizedEmail || !sanitizedContent) return;
+    if (!validateEmail(sanitizedEmail)) return;
+    if (sanitizedName.length > 100 || sanitizedContent.length > 1000) return;
+
     const comment: Comment = {
-      id: Date.now().toString(),
+      id: crypto.randomUUID(),
       postId: id,
-      authorName: newComment.name,
-      authorEmail: newComment.email,
-      content: newComment.content,
+      authorName: sanitizedName,
+      authorEmail: sanitizedEmail,
+      content: sanitizedContent,
       date: new Date().toISOString(),
       isApproved: false 
     };

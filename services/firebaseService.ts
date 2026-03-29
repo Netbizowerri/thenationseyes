@@ -9,10 +9,9 @@ import {
   where, 
   onSnapshot,
   setDoc,
-  getDoc,
-  getDocFromServer
+  getDoc
 } from 'firebase/firestore';
-import { db, auth } from '../firebase';
+import { db } from '../firebase';
 import { Post, Comment } from '../types';
 
 enum OperationType {
@@ -24,46 +23,10 @@ enum OperationType {
   WRITE = 'write',
 }
 
-interface FirestoreErrorInfo {
-  error: string;
-  operationType: OperationType;
-  path: string | null;
-  authInfo: {
-    userId: string | undefined;
-    email: string | null | undefined;
-    emailVerified: boolean | undefined;
-    isAnonymous: boolean | undefined;
-    tenantId: string | null | undefined;
-    providerInfo: {
-      providerId: string;
-      displayName: string | null;
-      email: string | null;
-      photoUrl: string | null;
-    }[];
-  }
-}
-
 function handleFirestoreError(error: unknown, operationType: OperationType, path: string | null) {
-  const errInfo: FirestoreErrorInfo = {
-    error: error instanceof Error ? error.message : String(error),
-    authInfo: {
-      userId: auth.currentUser?.uid,
-      email: auth.currentUser?.email,
-      emailVerified: auth.currentUser?.emailVerified,
-      isAnonymous: auth.currentUser?.isAnonymous,
-      tenantId: auth.currentUser?.tenantId,
-      providerInfo: auth.currentUser?.providerData.map(provider => ({
-        providerId: provider.providerId,
-        displayName: provider.displayName,
-        email: provider.email,
-        photoUrl: provider.photoURL
-      })) || []
-    },
-    operationType,
-    path
-  }
-  console.error('Firestore Error: ', JSON.stringify(errInfo));
-  throw new Error(JSON.stringify(errInfo));
+  const errorMessage = error instanceof Error ? error.message : String(error);
+  console.error(`Firestore Error [${operationType}] on ${path}: ${errorMessage}`);
+  throw new Error(`Firestore operation '${operationType}' failed.`);
 }
 
 export const firebaseService = {
@@ -178,7 +141,7 @@ export const firebaseService = {
 
   addComment: async (comment: Comment) => {
     const path = `comments/${comment.id}`;
-    console.log(`Adding comment to ${path}:`, comment.author);
+    console.log(`Adding comment to ${path}:`, comment.authorName);
     try {
       await setDoc(doc(db, 'comments', comment.id), comment);
       console.log(`Successfully added comment: ${comment.id}`);

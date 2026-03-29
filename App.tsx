@@ -8,36 +8,30 @@ import AdminPosts from './pages/AdminPosts';
 import AdminComments from './pages/AdminComments';
 import Login from './pages/Login';
 import About from './pages/About';
-import { storageService } from './services/storageService';
 import { firebaseService } from './services/firebaseService';
 import { auth } from './firebase';
-import { User, Post, Category } from './types';
+import { onAuthStateChanged, User as FirebaseUser } from 'firebase/auth';
+import { Post, Category } from './types';
 
-class ErrorBoundary extends React.Component<{ children: React.ReactNode }, { error: Error | null }> {
-  constructor(props: { children: React.ReactNode }) {
-    super(props);
-    this.state = { error: null };
+const ErrorBoundary: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [error, setError] = useState<Error | null>(null);
+
+  if (error) {
+    return (
+      <div style={{ padding: '40px', fontFamily: 'sans-serif' }}>
+        <h1 style={{ color: '#cc2121' }}>Something went wrong</h1>
+        <pre style={{ background: '#f1f5f9', padding: '16px', borderRadius: '8px', overflow: 'auto', fontSize: '13px' }}>
+          {error.message}
+        </pre>
+        <button onClick={() => setError(null)} style={{ marginTop: '16px', padding: '8px 16px', cursor: 'pointer' }}>
+          Try Again
+        </button>
+      </div>
+    );
   }
-  static getDerivedStateFromError(error: Error) {
-    return { error };
-  }
-  render() {
-    if (this.state.error) {
-      return (
-        <div style={{ padding: '40px', fontFamily: 'sans-serif' }}>
-          <h1 style={{ color: '#cc2121' }}>Something went wrong</h1>
-          <pre style={{ background: '#f1f5f9', padding: '16px', borderRadius: '8px', overflow: 'auto', fontSize: '13px' }}>
-            {this.state.error.message}
-          </pre>
-          <button onClick={() => this.setState({ error: null })} style={{ marginTop: '16px', padding: '8px 16px', cursor: 'pointer' }}>
-            Try Again
-          </button>
-        </div>
-      );
-    }
-    return this.props.children;
-  }
-}
+
+  return <>{children}</>;
+};
 
 const EyeLogo = () => (
   <Link to="/" className="relative w-10 h-10 md:w-12 md:h-12 flex items-center justify-center select-none cursor-pointer block group transition-transform duration-300 hover:scale-110">
@@ -161,10 +155,13 @@ const NewspaperHeader = ({ onMenuOpen }: { onMenuOpen: () => void }) => {
   });
 
   useEffect(() => {
-    const posts = storageService.getPosts()
-      .filter(p => p.status === 'published')
-      .slice(0, 10);
-    setLatestPosts(posts);
+    const unsubscribe = firebaseService.subscribeToPosts((allPosts) => {
+      const posts = allPosts
+        .filter(p => p.status === 'published')
+        .slice(0, 10);
+      setLatestPosts(posts);
+    });
+    return () => unsubscribe();
   }, [location.pathname]);
 
   return (
@@ -290,11 +287,33 @@ const PublicLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => 
   );
 };
 
+const ADMIN_EMAIL = 'netbiz0925@gmail.com';
+
 const AdminLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [user, setUser] = useState<User | null>(storageService.getAuth());
+  const [user, setUser] = useState<FirebaseUser | null>(null);
+  const [loading, setLoading] = useState(true);
   const location = useLocation();
 
-  if (!user || !user.isLoggedIn) {
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
+      setUser(firebaseUser);
+      setLoading(false);
+    });
+    return () => unsubscribe();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-[#f1f5f9]">
+        <div className="text-center">
+          <i className="fas fa-spinner fa-spin text-3xl text-slate-400"></i>
+          <p className="mt-4 text-slate-500 text-sm font-bold uppercase tracking-widest">Verifying access...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!user || user.email !== ADMIN_EMAIL) {
     return <Navigate to="/adminlogin" state={{ from: location }} replace />;
   }
 
@@ -304,8 +323,6 @@ const AdminLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     } catch (err) {
       console.error('Firebase sign out error:', err);
     }
-    storageService.setAuth(null);
-    setUser(null);
   };
 
   return (
@@ -333,9 +350,11 @@ const AdminLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         </nav>
         <div className="p-6 border-t border-white/5 bg-slate-950">
           <div className="flex items-center space-x-4 mb-8 p-3 bg-white/5 rounded-2xl">
-            <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-red-600 to-red-400 flex items-center justify-center font-bold text-lg border-2 border-white/10 shadow-lg">NC</div>
+            <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-red-600 to-red-400 flex items-center justify-center font-bold text-lg border-2 border-white/10 shadow-lg">
+              {user.displayName ? user.displayName.charAt(0).toUpperCase() : user.email?.charAt(0).toUpperCase()}
+            </div>
             <div>
-              <p className="text-sm font-bold truncate text-white">{user.username}</p>
+              <p className="text-sm font-bold truncate text-white">{user.displayName || user.email}</p>
               <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest">Admin Access</p>
             </div>
           </div>
@@ -361,7 +380,6 @@ const AdminLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 const App: React.FC = () => {
   useEffect(() => {
     try {
-      storageService.migrateToFirebase();
       firebaseService.testConnection();
     } catch (err) {
       console.error('Startup error:', err);

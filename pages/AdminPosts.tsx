@@ -34,7 +34,7 @@ const AdminPosts: React.FC = () => {
 
     if (result) {
       const newPost: Post = {
-        id: Date.now().toString(),
+        id: crypto.randomUUID(),
         title: result.title,
         excerpt: result.excerpt,
         content: result.content,
@@ -72,7 +72,7 @@ const AdminPosts: React.FC = () => {
             <i className="fas fa-robot mr-2"></i> AI Importer
           </button>
           <button 
-             onClick={() => { setEditingPost({ id: Date.now().toString(), status: 'draft', author: 'Noel Chiagorom', date: new Date().toISOString().split('T')[0] } as Post); setIsModalOpen(true); }}
+             onClick={() => { setEditingPost({ id: crypto.randomUUID(), status: 'draft', author: 'Noel Chiagorom', date: new Date().toISOString().split('T')[0] } as Post); setIsModalOpen(true); }}
              className="bg-red-600 text-white px-4 py-2 rounded-lg font-bold text-sm hover:bg-red-700 shadow-lg shadow-red-200"
           >
             <i className="fas fa-plus mr-2"></i> Manual Entry

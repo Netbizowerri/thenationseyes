@@ -17,6 +17,12 @@ dist-ssr
 .env.local
 .env.*.local
 
+# Firebase config with secrets
+firebase-applet-config.json
+
+# Build output (contains bundled secrets)
+dist
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

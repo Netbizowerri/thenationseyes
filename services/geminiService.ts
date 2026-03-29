@@ -5,9 +5,9 @@ let ai: GoogleGenAI | null = null;
 
 function getAI(): GoogleGenAI {
   if (!ai) {
-    const apiKey = process.env.API_KEY;
+    const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
     if (!apiKey) {
-      throw new Error('Gemini API key not configured. Set GEMINI_API_KEY in Vercel environment variables.');
+      throw new Error('Gemini API key not configured. Set VITE_GEMINI_API_KEY in environment variables.');
     }
     ai = new GoogleGenAI({ apiKey });
   }

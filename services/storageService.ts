@@ -4,7 +4,6 @@ import { firebaseService } from './firebaseService';
 
 const POSTS_KEY = 'nations_eyes_posts_v17';
 const COMMENTS_KEY = 'nations_eyes_comments';
-const AUTH_KEY = 'nations_eyes_auth';
 
 export const storageService = {
   // Migration logic
@@ -114,18 +113,5 @@ export const storageService = {
   deleteComment: (id: string) => {
     const comments = storageService.getComments().filter(c => c.id !== id);
     localStorage.setItem(COMMENTS_KEY, JSON.stringify(comments));
-  },
-
-  getAuth: (): User | null => {
-    const data = localStorage.getItem(AUTH_KEY);
-    return data ? JSON.parse(data) : null;
-  },
-
-  setAuth: (user: User | null) => {
-    if (user) {
-      localStorage.setItem(AUTH_KEY, JSON.stringify(user));
-    } else {
-      localStorage.removeItem(AUTH_KEY);
-    }
   }
 };

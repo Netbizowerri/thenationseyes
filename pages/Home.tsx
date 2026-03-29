@@ -1,7 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { Post, Category } from '../types';
-import { storageService } from '../services/storageService';
 import ArticleCard from '../components/ArticleCard';
 import HeroSlider from '../components/HeroSlider';
 import { Link, useParams, useNavigate } from 'react-router-dom';
