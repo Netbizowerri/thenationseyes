@@ -1,11 +1,23 @@
 
 import { GoogleGenAI, Type } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+let ai: GoogleGenAI | null = null;
+
+function getAI(): GoogleGenAI {
+  if (!ai) {
+    const apiKey = process.env.API_KEY;
+    if (!apiKey) {
+      throw new Error('Gemini API key not configured. Set GEMINI_API_KEY in Vercel environment variables.');
+    }
+    ai = new GoogleGenAI({ apiKey });
+  }
+  return ai;
+}
 
 export const geminiService = {
   async analyzeArticle(rawText: string) {
-    const response = await ai.models.generateContent({
+    const client = getAI();
+    const response = await client.models.generateContent({
       model: "gemini-3-flash-preview",
       contents: `Extract a journalistic blog post from this Facebook content. Provide a catchy headline, a short excerpt (max 30 words), and the cleaned-up editorial content. Ensure the tone is professional and insightful like Noel Chiagorom.
 

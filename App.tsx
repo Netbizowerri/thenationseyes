@@ -13,6 +13,32 @@ import { firebaseService } from './services/firebaseService';
 import { auth } from './firebase';
 import { User, Post, Category } from './types';
 
+class ErrorBoundary extends React.Component<{ children: React.ReactNode }, { error: Error | null }> {
+  constructor(props: { children: React.ReactNode }) {
+    super(props);
+    this.state = { error: null };
+  }
+  static getDerivedStateFromError(error: Error) {
+    return { error };
+  }
+  render() {
+    if (this.state.error) {
+      return (
+        <div style={{ padding: '40px', fontFamily: 'sans-serif' }}>
+          <h1 style={{ color: '#cc2121' }}>Something went wrong</h1>
+          <pre style={{ background: '#f1f5f9', padding: '16px', borderRadius: '8px', overflow: 'auto', fontSize: '13px' }}>
+            {this.state.error.message}
+          </pre>
+          <button onClick={() => this.setState({ error: null })} style={{ marginTop: '16px', padding: '8px 16px', cursor: 'pointer' }}>
+            Try Again
+          </button>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
 const EyeLogo = () => (
   <Link to="/" className="relative w-10 h-10 md:w-12 md:h-12 flex items-center justify-center select-none cursor-pointer block group transition-transform duration-300 hover:scale-110">
     <svg viewBox="0 0 100 100" className="w-full h-full drop-shadow-md overflow-visible">
@@ -334,25 +360,30 @@ const AdminLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
 const App: React.FC = () => {
   useEffect(() => {
-    console.log('App component mounted. Starting migration and connection test...');
-    storageService.migrateToFirebase();
-    firebaseService.testConnection();
+    try {
+      storageService.migrateToFirebase();
+      firebaseService.testConnection();
+    } catch (err) {
+      console.error('Startup error:', err);
+    }
   }, []);
 
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<PublicLayout><Home /></PublicLayout>} />
-        <Route path="/category/:categoryName" element={<PublicLayout><Home /></PublicLayout>} />
-        <Route path="/post/:id" element={<PublicLayout><ArticleDetail /></PublicLayout>} />
-        <Route path="/about" element={<PublicLayout><About /></PublicLayout>} />
-        <Route path="/adminlogin" element={<Login />} />
-        <Route path="/admin" element={<AdminLayout><AdminDashboard /></AdminLayout>} />
-        <Route path="/admin/posts" element={<AdminLayout><AdminPosts /></AdminLayout>} />
-        <Route path="/admin/comments" element={<AdminLayout><AdminComments /></AdminLayout>} />
-        <Route path="/login" element={<Navigate to="/adminlogin" replace />} />
-      </Routes>
-    </Router>
+    <ErrorBoundary>
+      <Router>
+        <Routes>
+          <Route path="/" element={<PublicLayout><Home /></PublicLayout>} />
+          <Route path="/category/:categoryName" element={<PublicLayout><Home /></PublicLayout>} />
+          <Route path="/post/:id" element={<PublicLayout><ArticleDetail /></PublicLayout>} />
+          <Route path="/about" element={<PublicLayout><About /></PublicLayout>} />
+          <Route path="/adminlogin" element={<Login />} />
+          <Route path="/admin" element={<AdminLayout><AdminDashboard /></AdminLayout>} />
+          <Route path="/admin/posts" element={<AdminLayout><AdminPosts /></AdminLayout>} />
+          <Route path="/admin/comments" element={<AdminLayout><AdminComments /></AdminLayout>} />
+          <Route path="/login" element={<Navigate to="/adminlogin" replace />} />
+        </Routes>
+      </Router>
+    </ErrorBoundary>
   );
 };
 
