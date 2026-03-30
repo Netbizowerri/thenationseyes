@@ -2,33 +2,15 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
     // ===============================================================
-    // Assumed Data Model
+    // Data Model
     // ===============================================================
     //
     // Collection: posts
-    // Document ID: auto-generated or slug
-    // Fields:
-    //   - id: string (required)
-    //   - title: string (required)
-    //   - excerpt: string (required)
-    //   - content: string (required)
-    //   - author: string (required)
-    //   - date: string (required)
-    //   - category: string (required)
-    //   - imageUrl: string (required)
-    //   - readTime: string (required)
-    //   - status: string (required, enum: ['published', 'draft'])
+    //   - id, title, excerpt, content, author, date, category,
+    //     imageUrl, readTime, status ('published'|'draft')
     //
     // Collection: comments
-    // Document ID: auto-generated
-    // Fields:
-    //   - id: string (required)
-    //   - postId: string (required)
-    //   - authorName: string (required)
-    //   - authorEmail: string (required)
-    //   - content: string (required)
-    //   - date: string (required)
-    //   - isApproved: bool (required)
+    //   - id, postId, authorName, authorEmail, content, date, isApproved
     //
     // ===============================================================
 
@@ -37,9 +19,10 @@ service cloud.firestore {
       return request.auth != null;
     }
 
+    // isAdmin: checks email only (email/password accounts are not auto-verified)
     function isAdmin() {
-      return isAuthenticated() && 
-        (request.auth.token.email == "netbiz0925@gmail.com" && request.auth.token.email_verified == true);
+      return isAuthenticated() &&
+        request.auth.token.email == "netbiz0925@gmail.com";
     }
 
     function isValidPost(data) {
@@ -70,11 +53,6 @@ service cloud.firestore {
       allow create: if isValidComment(request.resource.data);
       allow update: if isAdmin();
       allow delete: if isAdmin();
-    }
-
-    // Test connection document
-    match /test/{docId} {
-      allow read, write: if isAdmin();
     }
 
     // Deny all other access

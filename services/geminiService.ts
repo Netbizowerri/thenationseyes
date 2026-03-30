@@ -18,7 +18,7 @@ export const geminiService = {
   async analyzeArticle(rawText: string) {
     const client = getAI();
     const response = await client.models.generateContent({
-      model: "gemini-3-flash-preview",
+      model: "gemini-2.0-flash",
       contents: `Extract a journalistic blog post from this Facebook content. Provide a catchy headline, a short excerpt (max 30 words), and the cleaned-up editorial content. Ensure the tone is professional and insightful like Noel Chiagorom.
 
 Raw Text: ${rawText}`,

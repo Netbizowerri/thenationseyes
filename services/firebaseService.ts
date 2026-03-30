@@ -58,7 +58,7 @@ export const firebaseService = {
       console.log(`onSnapshot triggered for ${path}, docs: ${snapshot.docs.length}`);
       const allPosts = snapshot.docs.map(doc => doc.data() as Post);
       if (onlyPublished) {
-        callback(allPosts.filter(p => !p.status || p.status === 'published'));
+        callback(allPosts.filter(p => p.status === 'published'));
       } else {
         callback(allPosts);
       }

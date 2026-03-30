@@ -380,13 +380,7 @@ const AdminLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 };
 
 const App: React.FC = () => {
-  useEffect(() => {
-    try {
-      firebaseService.testConnection();
-    } catch (err) {
-      console.error('Startup error:', err);
-    }
-  }, []);
+  // Connection test removed — only run manually in dev if needed
 
   return (
     <HelmetProvider>

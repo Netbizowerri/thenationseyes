@@ -17,8 +17,8 @@ dist-ssr
 .env.local
 .env.*.local
 
-# Firebase config with secrets
-firebase-applet-config.json
+# Firebase config — committed intentionally (web API keys are public; security is in Firestore rules)
+# firebase-applet-config.json
 
 # Build output (contains bundled secrets)
 dist
