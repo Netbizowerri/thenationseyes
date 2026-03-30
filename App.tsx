@@ -10,6 +10,7 @@ import AdminComments from './pages/AdminComments';
 import Login from './pages/Login';
 import About from './pages/About';
 import ScrollToTop from './components/ScrollToTop';
+import SearchOverlay from './components/SearchOverlay';
 import { firebaseService } from './services/firebaseService';
 import { auth } from './firebase';
 import { onAuthStateChanged, User as FirebaseUser } from 'firebase/auth';
@@ -70,7 +71,7 @@ const CategoryIcon = ({ category }: { category: string }) => {
   }
 };
 
-const MobileMenuTray = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void }) => {
+const MobileMenuTray = ({ isOpen, onClose, onSearchOpen }: { isOpen: boolean, onClose: () => void, onSearchOpen: () => void }) => {
   const categories = Object.values(Category);
   
   return (
@@ -98,12 +99,13 @@ const MobileMenuTray = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => v
         <div className="flex-grow overflow-y-auto p-6 space-y-8 no-scrollbar">
           {/* Search Box */}
           <div className="relative">
-            <input 
-              type="text" 
-              placeholder="Search news..." 
-              className="w-full bg-slate-100 border-none p-4 pl-12 rounded-2xl text-xs font-bold uppercase tracking-widest focus:ring-2 focus:ring-red-600 outline-none"
-            />
-            <i className="fas fa-search absolute left-5 top-1/2 -translate-y-1/2 text-slate-400"></i>
+            <div 
+              onClick={() => { onClose(); onSearchOpen(); }}
+              className="w-full bg-slate-100 border-none p-4 pl-12 rounded-2xl text-xs font-bold uppercase tracking-widest cursor-pointer text-slate-400 hover:bg-slate-200 transition-colors"
+            >
+              Search news...
+            </div>
+            <i className="fas fa-search absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none"></i>
           </div>
 
           <div>
@@ -146,7 +148,7 @@ const MobileMenuTray = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => v
   );
 };
 
-const NewspaperHeader = ({ onMenuOpen }: { onMenuOpen: () => void }) => {
+const NewspaperHeader = ({ onMenuOpen, onSearchOpen }: { onMenuOpen: () => void, onSearchOpen: () => void }) => {
   const [latestPosts, setLatestPosts] = useState<Post[]>([]);
   const location = useLocation();
   
@@ -226,7 +228,7 @@ const NewspaperHeader = ({ onMenuOpen }: { onMenuOpen: () => void }) => {
         </div>
 
         <div className="flex items-center space-x-3 md:space-x-6">
-          <div className="hidden sm:flex items-center px-4 py-2 border border-red-600 rounded-full text-red-600 hover:bg-red-50 transition-colors cursor-pointer group active:scale-95">
+          <div onClick={onSearchOpen} className="hidden sm:flex items-center px-4 py-2 border border-red-600 rounded-full text-red-600 hover:bg-red-50 transition-colors cursor-pointer group active:scale-95">
             <i className="fas fa-search mr-2"></i>
             <span className="text-sm font-black uppercase tracking-tight">Search</span>
           </div>
@@ -254,11 +256,24 @@ const NewspaperHeader = ({ onMenuOpen }: { onMenuOpen: () => void }) => {
 
 const PublicLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  
+  useEffect(() => {
+    const handleGlobalKeyDown = (e: KeyboardEvent) => {
+      if ((e.ctrlKey && e.key === 'k') || (e.key === '/' && !(e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement))) {
+        e.preventDefault();
+        setIsSearchOpen(true);
+      }
+    };
+    window.addEventListener('keydown', handleGlobalKeyDown);
+    return () => window.removeEventListener('keydown', handleGlobalKeyDown);
+  }, []);
   
   return (
     <div className="min-h-screen flex flex-col bg-white">
-      <NewspaperHeader onMenuOpen={() => setIsMenuOpen(true)} />
-      <MobileMenuTray isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
+      <NewspaperHeader onMenuOpen={() => setIsMenuOpen(true)} onSearchOpen={() => setIsSearchOpen(true)} />
+      <MobileMenuTray isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} onSearchOpen={() => setIsSearchOpen(true)} />
+      <SearchOverlay isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
       <main className="flex-grow animate-in fade-in slide-in-from-bottom-4 duration-1000">
         {children}
       </main>

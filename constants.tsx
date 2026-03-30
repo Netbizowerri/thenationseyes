@@ -751,5 +751,51 @@ Seeing Beyond the Headlines, Telling the Truth Others Won’t.`,
     imageUrl: 'https://i.ibb.co/QvPKFqNQ/Gemini-Generated-Image-y8yv9ry8yv9ry8yv-1.png',
     readTime: '6 min',
     status: 'published'
+  },
+  {
+    id: 'society-eze-eme-njoku-anniversary-2026',
+    title: 'Eze Dr Eme Njoku Celebrates One Year on the Throne — Marks Anniversary of Staff of Office with Praise, Reflection, and Renewed Vision',
+    excerpt: 'His Royal Highness, Eze Dr Eme Njoku (Eze Udo II), marks the first anniversary of receiving his Staff of Office in Nguru/Umuowa Autonomous Community, celebrating a year of impactful leadership and cultural revival.',
+    content: `Nguru/Umuowa Autonomous Community was agog with celebration and deep reflection as His Royal Highness, Eze Dr Eme Njoku (Eze Udo II), marked the first anniversary of receiving his Staff of Office — a powerful symbol of his authority and legitimacy as the traditional ruler.
+
+The milestone event drew community leaders, elders, youths, and well-wishers who gathered to honour what many described as a year of impactful leadership and cultural revival.
+
+A YEAR OF PURPOSEFUL LEADERSHIP
+Since ascending the throne one year ago, Eze Udo II has distinguished his reign through:
+- Promotion of peace and unity across kindreds
+- Strengthening of traditional institutions and values
+- Encouragement of youth participation and engagement
+- Support for community-driven development initiatives
+
+Residents praised the monarch's humility, accessibility, and commitment to progress, noting that his leadership has brought renewed stability and direction to the community.
+
+"LEADERSHIP IS A COLLECTIVE RESPONSIBILITY" — EZE UDO II
+Speaking during the anniversary celebration, the royal father emphasized the importance of unity and shared responsibility in building a stronger community.
+
+> "Leadership is not a one-man task. It requires the cooperation, support, and commitment of every son and daughter of Nguru/Umuowa," he stated.
+
+He reaffirmed his dedication to fostering peace, development, and inclusiveness, urging indigenes at home and in the diaspora to contribute meaningfully to the growth of their homeland.
+
+COMMUNITY VOICES: HOPE FOR THE FUTURE
+Many attendees expressed optimism for the years ahead, describing the monarch's first year as a foundation for lasting transformation.
+
+An elder in the community noted:
+
+> "What we have seen in one year gives us confidence that greater things are coming."
+
+LOOKING AHEAD
+As Nguru/Umuowa celebrates this important milestone, the anniversary stands not just as a remembrance of the past, but as a renewed commitment to unity, progress, and cultural pride under the stewardship of Eze Udo II.
+
+Editor's Note
+Royal milestones like this anniversary remind us that traditional institutions remain a vital force for unity and grassroots development. Eze Udo II's first year on the throne offers a model of leadership rooted in service, humility, and collective progress — values that Nigeria's broader governance structures would do well to emulate.
+
+✒️ By Noel Chiagorom — The Nation's Eyes Newspaper
+Seeing Beyond the Headlines, Telling the Truth Others Won't.`,
+    author: 'Noel Chiagorom',
+    date: '2026-03-30',
+    category: Category.SOCIETY,
+    imageUrl: 'https://i.ibb.co/Tq8DBLYq/Screenshot-2026-03-30-093039.png',
+    readTime: '4 min',
+    status: 'published'
   }
 ];
