@@ -309,7 +309,12 @@ const ADMIN_EMAIL = 'netbiz0925@gmail.com';
 const AdminLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<FirebaseUser | null>(null);
   const [loading, setLoading] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    setSidebarOpen(false);
+  }, [location.pathname]);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
@@ -344,11 +349,26 @@ const AdminLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
   return (
     <div className="min-h-screen flex bg-[#f1f5f9]">
-      <aside className="w-72 bg-slate-950 text-white flex flex-col fixed h-full shadow-2xl z-50">
+      {sidebarOpen && (
+        <div 
+          className="fixed inset-0 bg-black/50 z-40 lg:hidden" 
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
+
+      <aside className={`w-72 bg-slate-950 text-white flex flex-col fixed h-full shadow-2xl z-50 transition-transform duration-300 ease-in-out ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0`}>
         <div className="p-8 border-b border-white/5 bg-slate-950">
-          <Link to="/" className="block group no-underline">
-            <h1 className="text-xl font-black italic tracking-tighter group-hover:text-red-500 transition-colors">THE NATION'S EYES</h1>
-          </Link>
+          <div className="flex items-center justify-between">
+            <Link to="/" className="block group no-underline">
+              <h1 className="text-xl font-black italic tracking-tighter group-hover:text-red-500 transition-colors">THE NATION'S EYES</h1>
+            </Link>
+            <button 
+              onClick={() => setSidebarOpen(false)} 
+              className="lg:hidden text-slate-400 hover:text-white transition-colors p-1"
+            >
+              <i className="fas fa-times text-lg"></i>
+            </button>
+          </div>
           <p className="text-[10px] text-red-500 uppercase tracking-[0.3em] font-bold mt-1">Admin Dashboard</p>
         </div>
         <nav className="flex-grow p-6 space-y-3 mt-4">
@@ -385,8 +405,14 @@ const AdminLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         </div>
       </aside>
 
-      <main className="ml-72 flex-grow p-12 overflow-y-auto">
+      <main className="flex-grow p-4 lg:p-12 lg:ml-72 overflow-y-auto">
         <div className="max-w-7xl mx-auto">
+          <button 
+            onClick={() => setSidebarOpen(true)} 
+            className="lg:hidden mb-4 p-3 bg-slate-950 text-white rounded-xl hover:bg-slate-800 transition-colors"
+          >
+            <i className="fas fa-bars text-lg"></i>
+          </button>
           {children}
         </div>
       </main>
