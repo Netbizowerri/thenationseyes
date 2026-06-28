@@ -102,6 +102,80 @@ Seeing Beyond the Headlines, Telling the Truth Others Won't.`,
     status: 'published'
   },
   {
+    id: 'sports-cape-verde-world-cup-history-2026',
+    title: 'Cape Verde Make History: Smallest Nation Ever to Reach World Cup Knockout Stage on Debut',
+    excerpt: 'Cape Verde have made history by becoming the smallest nation ever to reach the knockout stage at the FIFA World Cup, advancing to the Round of 32 on their tournament debut with three consecutive draws.',
+    content: `Cape Verde have written one of the most remarkable stories in FIFA World Cup history, becoming the smallest nation ever to reach the knockout stage of the tournament on their debut appearance.
+
+The Blue Sharks, representing an archipelago of 10 islands off the coast of West Africa with a population of just over 525,000, secured their place in the Round of 32 after a tense 0-0 draw against Saudi Arabia at the Houston Stadium on Friday, June 26, 2026.
+
+AN UNBEATEN GROUP-STAGE CAMPAIGN
+Cape Verde's journey through Group H defied all expectations. The debutants opened their campaign with a stunning 0-0 draw against 2010 world champions Spain, thanks largely to the heroics of 40-year-old goalkeeper Vozinha, who produced a man-of-the-match performance.
+
+They followed that up with a resilient 2-2 draw against two-time champions Uruguay, coming from behind to secure a vital point. The final group match against Saudi Arabia was a tense affair, with both sides knowing a win would guarantee qualification. But Cape Verde held firm, and when news filtered through that Spain had beaten Uruguay 1-0, wild celebrations erupted among players and fans alike.
+
+JOINING AN EXCLUSIVE CLUB
+Cape Verde became only the third nation in World Cup history to qualify for the knockout stage after drawing all three group-stage matches on their debut, joining an exclusive list. They are also the first debutant to progress beyond the group stage since Slovakia in 2010, and the first debutant to go unbeaten throughout the group stage since Senegal's memorable run in 2002.
+
+THE DIASPORA FACTOR
+Much of Cape Verde's success has been attributed to the federation's strategy of drawing on players from the country's vast diaspora. Fourteen members of their 26-man World Cup squad were born abroad, bringing experience from top European leagues while maintaining strong ties to their ancestral homeland.
+
+A DATE WITH THE DEFENDING CHAMPIONS
+Cape Verde's reward for their historic achievement is a blockbuster Round of 32 clash against defending world champions Argentina and arguably the greatest player of all time, Lionel Messi, in Miami on July 3.
+
+Speaking after qualification was secured, coach Bubista, draped in his country's flag, told reporters: "We are small, but we have big hearts and we are fighters. Everyone is entitled to dream, and nothing is impossible."
+
+Vozinha, the 40-year-old goalkeeper who has been the team's standout performer with two clean sheets in three matches, described the opportunity to face Argentina as a dream come true. "I don't think any of us ever dreamt of this," he said. "But playing against Argentina and Lionel Messi in a knockout game — this is what the World Cup is all about."
+
+✒️ By Noel Chiagorom — THE NATION'S EYES NEWSPAPER
+Seeing Beyond the Headlines, Telling the Truth Others Won't.`,
+    author: 'Noel Chiagorom',
+    date: '2026-06-27',
+    category: Category.SPORTS,
+    imageUrl: 'https://i.ibb.co/whFvYGL7/731855282-1577410417239477-6004296471406128165-n.jpg',
+    readTime: '4 min',
+    status: 'published'
+  },
+  {
+    id: 'sports-africa-nine-teams-round-of-32-2026',
+    title: 'Africa Makes History: Nine of Ten Nations Qualify for World Cup Round of 32',
+    excerpt: `African football has reached an unprecedented milestone at the 2026 FIFA World Cup, with nine of the continent's ten representatives advancing to the Round of 32 — the best performance in African World Cup history.`,
+    content: `African football has reached a historic milestone at the 2026 FIFA World Cup, with a record nine of the continent's ten nations advancing to the Round of 32 — shattering previous records and underlining Africa's growing influence on the global stage.
+
+The nine African teams that qualified for the knockout phase are: South Africa, Morocco, Ivory Coast, Senegal, Egypt, Ghana, Algeria, Cape Verde, and the Democratic Republic of Congo. Tunisia was the only African nation to miss out.
+
+A RECORD-BREAKING PERFORMANCE
+This achievement demolishes the previous record of just two African teams reaching the knockout stage in a single tournament, set in 2014 when Algeria and Nigeria advanced in Brazil. Before this World Cup, only six African nations had ever reached the knockout stage in the entire history of the tournament. Now, nine have done so in one edition alone.
+
+HOW EACH TEAM QUALIFIED
+- South Africa made history by reaching the World Cup knockout stage for the first time, sealing qualification with a crucial 1-0 victory over South Korea. They will face Canada in the Round of 32.
+- Morocco, the first African nation to reach a World Cup semifinal in 2022, continued their impressive run by defeating Haiti 4-2 to finish as Group C runners-up. They face the Netherlands next.
+- Ivory Coast finished second in Group E following victories over Ecuador and Curaçao and have been paired with Norway.
+- Senegal produced one of the performances of the tournament, thrashing Iraq 5-0 to qualify. They take on Belgium.
+- Egypt secured qualification after battling to a 1-1 draw with Iran and will face Australia.
+- Ghana progressed through a competitive Group L and now face Colombia.
+- Algeria survived a dramatic finale, drawing 3-3 with Austria in a pulsating encounter where captain Riyad Mahrez scored a stoppage-time goal. They face Switzerland.
+- Cape Verde became the smallest nation ever to reach the World Cup knockout stage on their debut and will face defending champions Argentina.
+- DR Congo created history by coming from behind to beat Uzbekistan 3-1 — their first-ever World Cup victory — earning a place in the knockout stage for the first time. They face England.
+
+WHAT THIS MEANS FOR AFRICAN FOOTBALL
+The unprecedented representation gives Africa genuine hopes of producing another historic run deep into the tournament. With nine teams still in contention across the knockout bracket, the continent enters the Round of 32 with its strongest-ever presence at the world's biggest sporting event.
+
+The expanded 48-team format, which provided more pathways for emerging football nations, has clearly benefited Africa, but the performances themselves have been nothing short of extraordinary. From Cape Verde's fairytale debut to Morocco's continued giant-killing, African teams have demonstrated that the continent's football infrastructure, coaching, and talent development are producing results on the grandest stage.
+
+Editor's Note
+Africa's record nine representatives in the World Cup Round of 32 is not just a statistical milestone — it is a statement of progress. For decades, African teams were considered happy to participate. Now, they arrive expecting to compete. The continent's footballing trajectory is clear, and the world is taking notice.
+
+✒️ By Noel Chiagorom — THE NATION'S EYES NEWSPAPER
+Seeing Beyond the Headlines, Telling the Truth Others Won't.`,
+    author: 'Noel Chiagorom',
+    date: '2026-06-27',
+    category: Category.SPORTS,
+    imageUrl: 'https://i.ibb.co/5WdfCCXw/The-Nation-s-Eyes.jpg',
+    readTime: '5 min',
+    status: 'published'
+  },
+  {
     id: 'editorial-ngor-okpala-deserves-better-2026',
     title: 'NGOR OKPALA DESERVES BETTER: THE TIME FOR POLITICAL TITLES IS OVER—THE TIME FOR RESULTS IS NOW',
     excerpt: 'Ngor Okpala LGA has four commissioners in the state executive yet residents see little evidence of government presence. This editorial calls for coordinated leadership and tangible development.',
