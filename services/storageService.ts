@@ -42,6 +42,16 @@ export const storageService = {
       return INITIAL_POSTS;
     }
     const posts = JSON.parse(data);
+    let changed = false;
+    for (const initPost of INITIAL_POSTS) {
+      if (!posts.some(p => p.id === initPost.id)) {
+        posts.push(initPost);
+        changed = true;
+      }
+    }
+    if (changed) {
+      localStorage.setItem(POSTS_KEY, JSON.stringify(posts));
+    }
     console.log(`Local posts found: ${posts.length}`);
     return posts;
   },
