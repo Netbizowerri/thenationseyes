@@ -1,28 +1,14 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    // ===============================================================
-    // Data Model
-    // ===============================================================
-    //
-    // Collection: posts
-    //   - id, title, excerpt, content, author, date, category,
-    //     imageUrl, readTime, status ('published'|'draft')
-    //
-    // Collection: comments
-    //   - id, postId, authorName, authorEmail, content, date, isApproved
-    //
-    // ===============================================================
 
     // Helper Functions
     function isAuthenticated() {
       return request.auth != null;
     }
 
-    // isAdmin: checks email only (email/password accounts are not auto-verified)
     function isAdmin() {
-      return isAuthenticated() &&
-        request.auth.token.email == "netbiz0925@gmail.com";
+      return isAuthenticated();
     }
 
     function isValidPost(data) {
@@ -39,7 +25,7 @@ service cloud.firestore {
              data.isApproved is bool;
     }
 
-    // Posts Rules
+    // Posts
     match /posts/{postId} {
       allow read: if true;
       allow create: if isAdmin() && isValidPost(request.resource.data);
@@ -47,7 +33,7 @@ service cloud.firestore {
       allow delete: if isAdmin();
     }
 
-    // Comments Rules
+    // Comments — anyone can create, but only admin can update/delete
     match /comments/{commentId} {
       allow read: if true;
       allow create: if isValidComment(request.resource.data);
@@ -55,7 +41,7 @@ service cloud.firestore {
       allow delete: if isAdmin();
     }
 
-    // Deny all other access
+    // Deny everything else
     match /{document=**} {
       allow read, write: if false;
     }

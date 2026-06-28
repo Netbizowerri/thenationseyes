@@ -2,6 +2,477 @@ import { Post, Category } from './types';
 
 export const INITIAL_POSTS: Post[] = [
   {
+    id: 'editorial-atedo-peterside-judges-2026',
+    title: 'Atedo Peterside Calls for Disciplinary Action Against Erring Judges',
+    excerpt: 'Prominent economist and founder of Stanbic IBTC Bank, Atedo Peterside, has called for stronger disciplinary measures against judges found guilty of misconduct, insisting that Nigeria cannot rely solely on appellate courts to correct controversial judicial decisions.',
+    content: `Prominent economist and founder of Stanbic IBTC Bank, Atedo Peterside, has called for stronger disciplinary measures against judges found guilty of misconduct, insisting that Nigeria cannot rely solely on appellate courts to correct controversial judicial decisions.
+
+A CONTROVERSIAL RULING SPARKS OUTCRY
+Peterside made the remarks on Saturday while reacting to the recent Federal High Court ruling in Lokoja that set aside an earlier judgment directing the Independent National Electoral Commission (INEC) to register the Nigeria Democratic Congress (NDC) as a political party.
+
+"THE CURE FOR JUDICIAL RASCALITY"
+According to him, allowing appellate courts alone to overturn what he described as "obnoxious judgments" without holding erring judges accountable only encourages judicial misconduct.
+
+"The cure for judicial rascality is disciplinary action. Glossing over rascality while relying on Appeal Courts alone to overturn obnoxious judgments encourages more judges to go into the lucrative business of delivering procurable obnoxious judgments," Peterside stated.
+
+His comments came in support of former Senator Sola Akinyede, who had earlier expressed concern over the state of the Nigerian judiciary, arguing that the justice system should be sustained by judicial integrity and ethical conduct rather than depending solely on higher courts to correct errors.
+
+THE LOKOJA JUDGEMENT EXPLAINED
+The controversy followed Friday's ruling by Justice Isah Dashen of the Federal High Court in Lokoja, who nullified the court's earlier order directing INEC to register the NDC. The judge held that the earlier judgment affected the interests of the Peace Movement Party (PMP), which claimed ownership of the logo used in the suit but was not joined as a party in the proceedings. The NDC has since rejected the judgment and vowed to challenge it at the Court of Appeal.
+
+A RENEWED DEBATE ON JUDICIAL ACCOUNTABILITY
+Peterside's intervention has reignited the debate over judicial accountability, with many legal observers arguing that disciplinary sanctions against judges found guilty of misconduct are essential to restoring public confidence in Nigeria's justice system.
+
+Editor's Note
+The credibility of any democracy rests heavily on the integrity of its judiciary. While appellate courts play a vital role in correcting legal errors, allegations of judicial misconduct require prompt investigation and appropriate disciplinary action. Upholding accountability within the judiciary remains critical to strengthening the rule of law and preserving public trust in Nigeria's democratic institutions.
+
+✒️ By Noel Chiagorom — THE NATION'S EYES NEWSPAPER
+Seeing Beyond the Headlines, Telling the Truth Others Won't.`,
+    author: 'Noel Chiagorom',
+    date: '2026-06-27',
+    category: Category.EDITORIAL,
+    imageUrl: 'https://i.ibb.co/5WdfCCXw/The-Nation-s-Eyes.jpg',
+    readTime: '3 min',
+    status: 'published'
+  },
+  {
+    id: 'politics-atiku-ndc-one-party-2026',
+    title: 'ATIKU ACCUSES TINUBU OF PLOT TO CREATE ONE-PARTY STATE OVER NDC COURT RULING',
+    excerpt: 'Former Vice President Atiku Abubakar has accused President Bola Ahmed Tinubu of attempting to turn Nigeria into a one-party state following a recent Federal High Court judgment that set aside an earlier order directing INEC to register the Nigeria Democratic Congress (NDC) as a political party.',
+    content: `Former Vice President Atiku Abubakar has accused President Bola Ahmed Tinubu of attempting to turn Nigeria into a one-party state following a recent Federal High Court judgment that set aside an earlier order directing the Independent National Electoral Commission (INEC) to register the Nigeria Democratic Congress (NDC) as a political party.
+
+The ruling, delivered by Justice Isah Dashen of the Federal High Court in Lokoja, nullified the court's December 10, 2025 judgment after finding that material facts had allegedly been suppressed and that an interested party was denied a fair hearing.
+
+ATIKU'S ALARM: "A DANGEROUS SIGNAL"
+Reacting to the development, Atiku described the judgment as a dangerous signal for Nigeria's democracy. He alleged that the current administration is systematically weakening opposition platforms ahead of the 2027 general elections and warned Nigerians to remain vigilant against any attempt to undermine political pluralism.
+
+According to the former vice president, efforts to restrict political competition could threaten national stability and erode the country's democratic foundations.
+
+OPPOSITION PARTIES CONDEMN THE RULING
+The opposition also rallied against the decision. The Peoples Democratic Party condemned the judgment, arguing that it further narrows Nigeria's democratic space, while the Labour Party described the development as evidence of institutional decline and a setback for democratic governance.
+
+NDC VOWS TO FIGHT ON
+Despite the court's decision, the leadership of the Nigeria Democratic Congress (NDC) has assured its members and supporters that the party remains committed to its political aspirations. The party announced that it will appeal the judgment in a bid to preserve its legal status and continue its participation in Nigeria's political process.
+
+The legal battle over the NDC's registration is expected to continue in the appellate courts, with observers closely monitoring its implications for Nigeria's democratic landscape ahead of the 2027 elections.
+
+Editor's Note
+The controversy surrounding the NDC's registration has intensified political tensions, with opposition leaders warning against actions they believe could weaken multiparty democracy. The final legal outcome may have significant implications for Nigeria's electoral environment as preparations for the 2027 general elections gather momentum.
+
+✒️ By Noel Chiagorom — THE NATION'S EYES NEWSPAPER
+Seeing Beyond the Headlines, Telling the Truth Others Won't.`,
+    author: 'Noel Chiagorom',
+    date: '2026-06-27',
+    category: Category.POLITICS,
+    imageUrl: 'https://i.ibb.co/rf39hFjj/The-Nation-s-Eyes-1.jpg',
+    readTime: '4 min',
+    status: 'published'
+  },
+  {
+    id: 'world-asteroid-flyby-1997-nc1-2026',
+    title: 'Asteroid Larger Than the Empire State Building to Make Closest Earth Flyby in Over 400 Years',
+    excerpt: 'A massive asteroid designated (152637) 1997 NC1 is set to make its closest approach to Earth in more than four centuries on Saturday, June 27, 2026, according to astronomers.',
+    content: `A massive asteroid designated (152637) 1997 NC1 is set to make its closest approach to Earth in more than four centuries on Saturday, June 27, 2026, according to astronomers. Despite its size, scientists have confirmed there is no danger of the asteroid colliding with Earth.
+
+The asteroid will reach its closest point at 11:14 a.m. UTC (7:14 a.m. EDT), passing at a safe distance of approximately 1.59 million miles (2.56 million kilometers) from Earth—about 6.6 times farther away than the Moon.
+
+SIZE AND SIGNIFICANCE
+Astronomers estimate the space rock measures between 0.75 and 1.65 kilometers (2,461–5,413 feet) across, making it roughly the size of two to four Empire State Buildings.
+
+Although classified as a potentially hazardous asteroid because of its size and orbital path, experts emphasize that this flyby poses no threat to Earth.
+
+VIEWING OPPORTUNITIES
+Skywatchers equipped with binoculars or small telescopes may have an opportunity to observe the asteroid as it moves across the night sky. However, viewing conditions could be affected by the bright, nearly full Moon.
+
+A RARE EVENT
+The event is particularly significant because it marks the asteroid's closest approach in more than 400 years. Scientists say it will not come this close to Earth again until the year 2133, making this a rare astronomical event for both researchers and amateur stargazers.
+
+Space agencies continue to monitor near-Earth objects like 1997 NC1 as part of ongoing efforts to understand and track potentially hazardous asteroids, ensuring that any future risks can be detected well in advance.
+
+Editor's Note
+While the term "potentially hazardous" may sound alarming, it is a scientific classification based on an asteroid's size and orbit—not an indication of an imminent impact. In this case, experts have confirmed that the flyby is completely safe.
+
+✒️ By Noel Chiagorom — The Nation's Eyes Newspaper
+Seeing Beyond the Headlines, Telling the Truth Others Won't.`,
+    author: 'Noel Chiagorom',
+    date: '2026-06-26',
+    category: Category.WORLD,
+    imageUrl: 'https://i.ibb.co/whFvYGL7/731855282-1577410417239477-6004296471406128165-n.jpg',
+    readTime: '3 min',
+    status: 'published'
+  },
+  {
+    id: 'politics-shettima-northern-governors-education-2026',
+    title: 'Shettima, Northern Governors Seek Greater Investment in Education, Human Capital Development',
+    excerpt: 'Nigeria\'s Vice President, Kashim Shettima, alongside governors from the northern states, has called for increased investment in education, healthcare, and skills development as a critical strategy for improving human capital across Northern Nigeria.',
+    content: `Nigeria's Vice President, Kashim Shettima, alongside governors from the northern states, has called for increased investment in education, healthcare, and skills development as a critical strategy for improving human capital and driving sustainable economic growth across Northern Nigeria.
+
+The call was made during discussions on the region's development priorities, where leaders emphasized that meaningful progress cannot be achieved without equipping citizens with quality education, accessible healthcare, and employable skills.
+
+HUMAN CAPITAL AS A DEVELOPMENT PRIORITY
+According to the Vice President and the governors, strengthening human capital is essential to tackling poverty, unemployment, insecurity, and low productivity, while positioning the region to attract greater domestic and foreign investment.
+
+They stressed that improving educational outcomes, expanding vocational and technical training, and investing in healthcare would create a healthier, more productive workforce capable of supporting Nigeria's long-term economic ambitions.
+
+A CALL FOR COLLABORATION
+The leaders also urged stronger collaboration among federal and state governments, development partners, and the private sector to ensure sustained investment in the region's human development agenda.
+
+Editor's Note
+Human capital remains the foundation of every successful nation. Roads, bridges, and infrastructure are important, but no investment yields greater long-term returns than educating people, improving healthcare, and equipping citizens with relevant skills. If Northern Nigeria succeeds in transforming its human capital, the benefits will extend far beyond the region and strengthen Nigeria's overall development.
+
+✒️ By Noel Chiagorom — The Nation's Eyes Newspaper
+Seeing Beyond the Headlines, Telling the Truth Others Won't.`,
+    author: 'Noel Chiagorom',
+    date: '2026-06-27',
+    category: Category.POLITICS,
+    imageUrl: 'https://i.ibb.co/Nndf1TzW/731397840-979521511753171-6364129673888879796-n.jpg',
+    readTime: '3 min',
+    status: 'published'
+  },
+  {
+    id: 'world-burkina-faso-cuts-ties-france-2026',
+    title: 'Burkina Faso Cuts Diplomatic Ties With France, Closes French Embassy',
+    excerpt: 'Burkina Faso\'s military-led government has officially severed diplomatic relations with France, bringing an end to formal state-to-state ties between the two countries after years of worsening relations.',
+    content: `Ouagadougou, Burkina Faso — Burkina Faso's military-led government has officially severed diplomatic relations with France, bringing an end to formal state-to-state ties between the two countries after years of worsening relations.
+
+The government said the decision was taken because of what it described as France's "neo-colonial ambitions" and repeated interference in Burkina Faso's internal affairs and national sovereignty.
+
+As part of the move, the French Embassy in Ouagadougou has been closed, and all official diplomatic and institutional relations between the two nations have ceased.
+
+TERMS FOR FUTURE ENGAGEMENT
+Authorities in Burkina Faso stated that future relations must be based on mutual respect, equality, and non-interference in domestic affairs, insisting that the existing framework no longer reflected those principles.
+
+The government, however, clarified that the diplomatic break applies only to official state institutions and political relations. It emphasized that cultural, historical, and people-to-people ties between Burkinabè and French citizens remain separate from the government's political decision.
+
+A HISTORY OF WORSENING TIES
+The latest development follows several years of escalating tensions between the two countries. During that period, Burkina Faso expelled French diplomats, terminated long-standing defence agreements with France, and oversaw the withdrawal of French special forces from its territory.
+
+BROADER REGIONAL IMPLICATIONS
+The decision marks another significant shift in the geopolitical landscape of West Africa, where several military-led governments have increasingly sought to distance themselves from France while pursuing new international partnerships.
+
+Editor's Note
+Burkina Faso's decision represents one of the most dramatic breaks with France in the country's post-independence history. It reflects a broader regional trend in parts of the Sahel, where military governments have questioned France's long-standing political and military influence and are redefining their foreign policy priorities.
+
+✒️ By Noel Chiagorom — The Nation's Eyes Newspaper
+Seeing Beyond the Headlines, Telling the Truth Others Won't.`,
+    author: 'Noel Chiagorom',
+    date: '2026-06-27',
+    category: Category.WORLD,
+    imageUrl: 'https://i.ibb.co/39Pw6b6G/The-Nation-s-Eyes-8.jpg',
+    readTime: '3 min',
+    status: 'published'
+  },
+  {
+    id: 'economy-muslim-media-petrol-price-cut-2026',
+    title: 'MUSLIM MEDIA GROUP URGES FG TO CUT PETROL PRICE BACK TO ₦700 PER LITRE',
+    excerpt: 'A non-governmental organization, the Muslim Media Watch Group of Nigeria (MMWG), has called on the Federal Government to ensure that the pump price of petrol returns to its pre-war level of ₦700 per litre following the ceasefire between the United States and Iran.',
+    content: `A non-governmental organization, the Muslim Media Watch Group of Nigeria (MMWG), has called on the Federal Government to ensure that the pump price of Premium Motor Spirit (PMS), popularly known as petrol, returns to its pre-war level of ₦700 per litre following the ceasefire between the United States and Iran.
+
+In a statement issued by the Group's National Coordinator, Alhaji Ibrahim Abdullahi, the organization argued that the geopolitical tensions between the United States, Israel and Iran, which had triggered a rise in global crude oil prices and subsequently increased fuel prices, have now eased with the ceasefire agreement.
+
+NO JUSTIFICATION FOR PRICES ABOVE ₦1,000
+According to the Group, there is no longer any justification for petroleum marketers in Nigeria to continue selling petrol at prices exceeding ₦1,000 per litre.
+
+The MMWG described the continued high cost of petrol and diesel as economic sabotage against Nigerians, stressing that the prices of petroleum products, particularly those that directly affect the daily lives of ordinary citizens, should immediately fall below the ₦1,000 mark.
+
+The organization noted that reports indicate consumers in several countries affected by the recent Middle East conflict have already begun enjoying reductions in fuel prices, questioning why Nigerians have yet to experience similar relief.
+
+DEMAND FOR GOVERNMENT INTERVENTION
+The Group therefore urged the Federal Government to intervene without delay by directing petroleum marketers to revert to the pre-war petrol price of ₦700 per litre, thereby easing the economic hardship faced by millions of Nigerians.
+
+It also called on the Federal Competition and Consumer Protection Commission (FCCPC) to investigate the continued high fuel prices and take appropriate regulatory action to protect consumers.
+
+While making its appeal, the Muslim Media Watch Group commended the Dangote Group for its role in advancing petroleum refining in Nigeria and for its efforts toward ensuring more competitive fuel pricing aimed at reducing the burden on Nigerians.
+
+✒️ By Noel Chiagorom — The Nation's Eyes Newspaper
+Seeing Beyond the Headlines, Telling the Truth Others Won't.`,
+    author: 'Noel Chiagorom',
+    date: '2026-06-27',
+    category: Category.ECONOMY,
+    imageUrl: 'https://i.ibb.co/2Yq2H0Yc/731014476-1894741731500326-5834527617719915850-n.jpg',
+    readTime: '3 min',
+    status: 'published'
+  },
+  {
+    id: 'economy-nigeria-uae-financing-drawdown-2026',
+    title: 'Nigeria Draws Down $1.5 Billion from UAE Financing Deal Amid IMF, Fitch Warnings',
+    excerpt: 'The Federal Government of Nigeria has officially drawn down the first $1.5 billion from a $5 billion structured financing facility arranged with the United Arab Emirates\' largest lender, First Abu Dhabi Bank (FAB).',
+    content: `The Federal Government of Nigeria has officially drawn down the first $1.5 billion from a $5 billion structured financing facility arranged with the United Arab Emirates' largest lender, First Abu Dhabi Bank (FAB).
+
+The financing arrangement, approved by Nigeria's National Assembly in March 2026 as part of President Bola Ahmed Tinubu's external borrowing programme, is intended to provide cheaper foreign-currency liquidity for budget support, refinancing of domestic debt, and the execution of major infrastructure projects.
+
+HOW THE FINANCING ARRANGEMENT WORKS
+Unlike a conventional sovereign loan, the facility is structured as a Total Return Swap (TRS)—a sophisticated financial derivative.
+
+Under the arrangement:
+- Nigeria pledges naira-denominated Federal Government bonds as collateral.
+- The collateral is valued at approximately 133% of the borrowed amount, meaning the full $5 billion facility would require roughly $6.65 billion worth of FGN bonds.
+- FAB immediately provides dollar liquidity to Nigeria.
+- Nigeria pays a floating interest rate linked to the Secured Overnight Financing Rate (SOFR) plus about 4%, while FAB receives the returns and price movements generated by the pledged government bonds.
+
+IMF AND FITCH RAISE RED FLAGS
+Despite the government's confidence in the arrangement, both the International Monetary Fund and Fitch Ratings have urged caution.
+
+Their concerns include:
+- Transparency: Structured derivative transactions may not always appear clearly in conventional debt statistics, making it harder to accurately assess a country's total debt exposure.
+- Margin Call Risk: A sharp decline in the value of Nigeria's pledged bonds or a significant depreciation of the naira could trigger costly margin calls, potentially placing additional pressure on the country's foreign exchange reserves.
+- Lessons from Other Countries: The IMF has pointed to experiences in countries such as Angola and Senegal, where similar financing structures reportedly amplified fiscal stress during periods of economic volatility.
+
+GOVERNMENT'S POSITION
+The Tinubu administration maintains that the financing structure is a practical alternative to issuing expensive Eurobonds at a time of elevated global interest rates.
+
+Officials argue that the facility provides access to foreign exchange at a relatively lower initial cost while creating fiscal space to refinance costly domestic borrowing and finance strategic national infrastructure projects, including the Lagos-Calabar Coastal Highway.
+
+WHY IT MATTERS
+The transaction represents one of Nigeria's most sophisticated sovereign financing arrangements in recent years. While it may improve short-term access to foreign currency and reduce immediate financing costs, analysts note that its long-term success will depend on prudent debt management, exchange-rate stability, and the country's ability to manage the risks associated with derivative-based borrowing.
+
+Editor's Note
+Nigeria's decision reflects the difficult balancing act facing many emerging economies: securing affordable financing while avoiding debt structures that could create future fiscal vulnerabilities. Whether this arrangement proves beneficial or burdensome will largely depend on disciplined economic management and transparency in implementation.
+
+✒️ By Noel Chiagorom — The Nation's Eyes Newspaper
+Seeing Beyond the Headlines, Telling the Truth Others Won't.`,
+    author: 'Noel Chiagorom',
+    date: '2026-06-27',
+    category: Category.ECONOMY,
+    imageUrl: 'https://i.ibb.co/gFBd9kSp/The-Nation-s-Eyes-7.jpg',
+    readTime: '5 min',
+    status: 'published'
+  },
+  {
+    id: 'economy-minimum-wage-review-fg-2026',
+    title: 'Federal Government Confirms Fresh Review of ₦70,000 Minimum Wage',
+    excerpt: 'The Federal Government has confirmed that the current ₦70,000 national minimum wage will soon be reviewed upward, acknowledging that the existing wage no longer reflects Nigeria\'s prevailing economic realities.',
+    content: `Abuja, Nigeria – The Federal Government has confirmed that the current ₦70,000 national minimum wage will soon be reviewed upward, acknowledging that the existing wage no longer reflects Nigeria's prevailing economic realities.
+
+The announcement was made by the Chief of Staff to the President, Femi Gbajabiamila, during the Good Governance Summit held in Abuja.
+
+GOVERNMENT ACKNOWLEDGES ECONOMIC PRESSURE ON WORKERS
+Gbajabiamila stated that the administration recognizes the economic pressures facing Nigerian workers and is committed to ensuring that wages are adjusted to better align with the rising cost of living. He assured that the Federal Government would work collaboratively with organized labour during the renegotiation process.
+
+According to him, the review will be approached as a partnership between government, labour unions, and other relevant stakeholders, with the goal of improving workers' welfare while sustaining economic growth and job creation.
+
+WHY A REVIEW IS NEEDED NOW
+The confirmation comes amid increasing calls from labour unions and state governments for a fresh wage review following persistent inflation, rising food prices, transportation costs, and the depreciation of the naira, all of which have significantly reduced the purchasing power of Nigerian workers.
+
+The Nigeria Governors' Forum (NGF) has also been engaging labour leaders on possible adjustments to the nation's wage structure as concerns grow over the country's cost-of-living crisis.
+
+WHAT'S NEXT?
+Although the Federal Government did not announce a specific figure or timeline for the new minimum wage, the confirmation signals that formal negotiations are expected to begin in the coming months.
+
+Labour unions have consistently argued that the current ₦70,000 minimum wage, approved less than two years ago, has already been overtaken by inflation and no longer provides a living wage for the average Nigerian worker.
+
+More details are expected as consultations between the Federal Government, state governments, employers, and organized labour progress.
+
+Editor's Note
+The planned wage review reflects the government's acknowledgment that Nigeria's economic conditions have changed rapidly. However, the success of any increase will depend not only on the amount approved but also on effective measures to control inflation and preserve workers' purchasing power.
+
+✒️ By Noel Chiagorom — THE NATION'S EYES NEWSPAPER
+Seeing Beyond the Headlines, Telling the Truth Others Won't.`,
+    author: 'Noel Chiagorom',
+    date: '2026-06-27',
+    category: Category.ECONOMY,
+    imageUrl: 'https://i.ibb.co/LDncLZZ4/731022777-2086377305424931-7215882253709112053-n.jpg',
+    readTime: '4 min',
+    status: 'published'
+  },
+  {
+    id: 'society-police-rifles-lost-terrorists-sbm-2026',
+    title: 'Abia, Delta Lead as Nigeria Police Lose 201 Rifles to Terrorists, Bandits — SBM Intel Report',
+    excerpt: 'A new report by SBM Intelligence has revealed that the Nigeria Police Force lost 201 rifles to terrorists, bandits, and kidnappers between 2021 and mid-2026, raising fresh concerns about weapons security.',
+    content: `ABUJA, Nigeria — A new report by SBM Intelligence's Violence Tracker has revealed that the Nigeria Police Force lost 201 rifles to terrorists, bandits, kidnappers, and other armed groups between 2021 and mid-2026, raising fresh concerns about the security of government weapons and the country's worsening insecurity.
+
+The report, titled "Nigeria's Stolen Rifles: Who Loses, Who Takes," documented the theft of 282 rifles from various Nigerian security agencies in 94 separate incidents across the country during the review period.
+
+A STAGGERING STATISTICAL BREAKDOWN
+According to the findings, the Nigeria Police accounted for 201 stolen rifles, representing 71.3 percent of the total number of weapons lost. The Nigerian military lost 45 rifles (16 percent), while unspecified security agencies lost 15 rifles (5.3 percent). Other agencies, including the Nigeria Security and Civil Defence Corps (NSCDC) and the Nigeria Customs Service (NCS), lost 12 rifles, while vigilante groups lost nine.
+
+WHO IS STEALING THE WEAPONS?
+The report identified unknown gunmen as the leading perpetrators, responsible for stealing 168 rifles (59.6 percent). Bandits were linked to 58 rifles (20.6 percent), while the Islamic State West Africa Province (ISWAP) seized 41 rifles (14.5 percent). Smaller numbers were attributed to kidnappers and Boko Haram fighters.
+
+DELTA AND ABIA TOP THE LIST
+Geographically, Delta State recorded the highest number of stolen rifles with 67, followed closely by Abia State with 51. Borno State recorded 40, Zamfara State 20, and Katsina State 11. Together, Delta and Abia accounted for 42 percent of all rifle thefts nationwide.
+
+SBM Intelligence also noted that the rate of rifle thefts increased significantly in 2026, suggesting that attacks targeting security personnel and armouries have intensified.
+
+Despite these losses, the report pointed out that Nigerian security agencies recovered 1,442 rifles during the same period—far exceeding the 282 rifles stolen from security personnel.
+
+According to SBM Intelligence, this indicates that Nigeria's illegal weapons crisis extends far beyond firearms stolen from government security agencies.
+
+The report concluded:
+> "Between 2021 and mid-2026, armed groups stole 282 rifles from Nigerian security forces across 94 incidents. Police lost 71 percent of these. Delta and Abia accounted for 42 percent of thefts, with the pace accelerating in 2026. Yet the recoveries (1,442) dwarf thefts; this is a sign that Nigeria's illegal weapons problem goes far beyond stolen service rifles."
+
+The findings are expected to renew calls for tighter armoury management, improved protection of security personnel, and stronger measures to curb the proliferation of illicit firearms across Nigeria.
+
+Editor's Note
+The report highlights both a vulnerability within Nigeria's security institutions and the broader challenge of illegal arms circulation. While the recovery of more than 1,400 rifles is encouraging, the continued theft of service weapons underscores the need for stronger safeguards and a comprehensive strategy to stem the flow of illicit firearms.
+
+✒️ By Noel Chiagorom — THE NATION'S EYES NEWSPAPER
+Seeing Beyond the Headlines, Telling the Truth Others Won't.`,
+    author: 'Noel Chiagorom',
+    date: '2026-06-27',
+    category: Category.SOCIETY,
+    imageUrl: 'https://i.ibb.co/jZkk87Vp/729293595-1399964851971775-5844526154860225776-n.jpg',
+    readTime: '5 min',
+    status: 'published'
+  },
+  {
+    id: 'economy-tcn-power-outage-maintenance-2026',
+    title: 'Power Outage to Hit Parts of Five Nigerian States as TCN Schedules Maintenance',
+    excerpt: 'The Transmission Company of Nigeria (TCN) has announced that residents in parts of Kano, Katsina, Jigawa, Bauchi, and Yobe states will experience temporary electricity disruption due to a planned maintenance exercise.',
+    content: `The Transmission Company of Nigeria (TCN) has announced that residents in parts of Kano, Katsina, Jigawa, Bauchi, and Yobe states will experience temporary electricity disruption due to a planned maintenance exercise.
+
+According to TCN's spokesperson, Ndidi Mbah, the power interruption is necessary to enable engineers carry out scheduled maintenance work at the Kumbotso 330kV Transmission Substation on Sunday.
+
+SCHEDULED MAINTENANCE FOR GRID RELIABILITY
+The company explained that the maintenance is aimed at improving the reliability and efficiency of the national transmission network. Power supply to the affected areas will be temporarily interrupted for the duration of the maintenance before being restored upon completion of the work.
+
+The outage will also affect Gazaoua in the Niger, which receives electricity through the affected transmission line.
+
+TCN appealed to customers in the affected locations to bear with the temporary inconvenience, assuring them that electricity supply will be restored immediately after the maintenance exercise is completed.
+
+Editor's Note
+Planned maintenance is a routine part of maintaining the national electricity grid. While temporary outages may inconvenience residents and businesses, such exercises are intended to enhance the stability and reliability of power supply in the long term.
+
+✒️ By Noel Chiagorom — THE NATION'S EYES NEWSPAPER
+Seeing Beyond the Headlines, Telling the Truth Others Won't.`,
+    author: 'Noel Chiagorom',
+    date: '2026-06-27',
+    category: Category.ECONOMY,
+    imageUrl: 'https://i.ibb.co/Df3Qr9FZ/The-Nation-s-Eyes-6.jpg',
+    readTime: '2 min',
+    status: 'published'
+  },
+  {
+    id: 'politics-uzodimma-intelligence-security-imo-2026',
+    title: 'Gov. Uzodimma Reaffirms Commitment to Intelligence-Led Security in Imo',
+    excerpt: 'Governor Hope Uzodimma has reiterated the importance of intelligence gathering in maintaining peace and security, following an official visit by the Commandant of the Nigeria Defence Intelligence College (DIC) to Imo State.',
+    content: `Governor Hope Uzodimma has reiterated the importance of intelligence gathering in maintaining peace and security, following an official visit by the Commandant of the Nigeria Defence Intelligence College (DIC), Commodore Usman M. Bugaje, and his delegation to Imo State.
+
+The governor stated that Imo's success in overcoming the security challenges that previously affected the state was largely achieved through the effective deployment of intelligence and coordinated security operations.
+
+INTELLIGENCE AS THE CORNERSTONE OF SECURITY
+According to Uzodimma, the state has regained stability and remains committed to consolidating the progress made in safeguarding lives and property.
+
+He emphasized that Nigeria's security architecture must continue to be intelligence-driven, noting that a deeper understanding of emerging security threats is essential to protecting citizens and strengthening national stability.
+
+A CRITICAL INSTITUTION FOR NATIONAL SECURITY
+The governor also described the Defence Intelligence College as a critical institution in enhancing Nigeria's intelligence capabilities, adding that its work complements the security agenda of President Bola Ahmed Tinubu.
+
+Uzodimma commended Commodore Usman M. Bugaje and his team for their engagement and pledged Imo State's continued support and collaboration with the institution in advancing national security objectives.
+
+✒️ By Noel Chiagorom — THE NATION'S EYES NEWSPAPER
+Seeing Beyond the Headlines, Telling the Truth Others Won't.`,
+    author: 'Noel Chiagorom',
+    date: '2026-06-27',
+    category: Category.POLITICS,
+    imageUrl: 'https://i.ibb.co/Q78GjdGr/The-Nation-s-Eyes-5.jpg',
+    readTime: '2 min',
+    status: 'published'
+  },
+  {
+    id: 'world-us-social-security-work-penalty-2026',
+    title: 'US Lawmakers Move to End Social Security Work Penalty for Early Retirees',
+    excerpt: 'The United States Congress is considering new legislation that could allow millions of senior citizens to continue working without facing temporary reductions in their Social Security benefits.',
+    content: `The United States Congress is considering new legislation that could allow millions of senior citizens to continue working without facing temporary reductions in their Social Security benefits.
+
+The proposed Senior Citizens' Freedom to Work Act, introduced by U.S. Senator Rick Scott and Congressman Greg Murphy, seeks to eliminate the Retirement Earnings Test (RET)—a long-standing rule that reduces Social Security benefits for early retirees who earn above a specified annual income threshold.
+
+HOW THE CURRENT SYSTEM WORKS
+Under the current law, Americans who begin receiving Social Security benefits before reaching their full retirement age can earn up to $24,480 annually. Any earnings above that limit result in $1 in Social Security benefits being withheld for every $2 earned over the threshold. Although the withheld benefits are later restored through higher monthly payments once beneficiaries reach full retirement age, critics argue the policy discourages older Americans from remaining in the workforce.
+
+A BIPARTISAN PUSH FOR CHANGE
+Supporters of the bill say the Retirement Earnings Test is an outdated policy that creates unnecessary financial and administrative burdens for retirees. They argue that eliminating the earnings limit would provide greater financial flexibility for seniors while encouraging experienced workers to remain economically active and help address labour shortages.
+
+WHAT THE NEW BILL PROPOSES
+If approved by both chambers of Congress and signed into law, the legislation would allow eligible retirees between age 62 and their full retirement age to earn unlimited employment income without having their Social Security benefits temporarily reduced.
+
+The bill is currently before the U.S. Congress and has not yet become law.
+
+✒️ By Noel Chiagorom — THE NATION'S EYES NEWSPAPER
+Seeing Beyond the Headlines, Telling the Truth Others Won't.`,
+    author: 'Noel Chiagorom',
+    date: '2026-06-27',
+    category: Category.WORLD,
+    imageUrl: 'https://i.ibb.co/Wp7WHg8t/The-Nation-s-Eyes-4.jpg',
+    readTime: '3 min',
+    status: 'published'
+  },
+  {
+    id: 'society-illegal-gun-makers-fulani-2026',
+    title: 'Illegal Gun Makers Sold Weapons to Fulani Militias for Higher Profits — Military',
+    excerpt: 'The Nigerian military has disclosed that suspects arrested at illegal weapon manufacturing factories in Plateau State confessed to selling locally fabricated firearms to Fulani militias because they were willing to pay higher prices.',
+    content: `The Nigerian military has disclosed that suspects arrested at illegal weapon manufacturing factories in Plateau State confessed to selling locally fabricated firearms to Fulani militias because they were willing to pay higher prices than other buyers.
+
+The revelation was made on Saturday, June 27, 2026, by the Chief of Staff of Operation Safe Haven/Operation Enduring Peace (OPSH), Brigadier General Selong Sule, while briefing journalists in Jos on behalf of the Commander, Major General Folusho Oyinlola.
+
+RAIDS DISMANTLE CLANDESTINE ARMS FACTORIES
+According to the military, recent intelligence-led operations uncovered and dismantled between three and four clandestine arms manufacturing factories operating across Plateau State. Several suspects were arrested during the raids, while weapons, ammunition-making equipment, and production tools were recovered.
+
+PROFIT OVER PATRIOTISM: THE CONFESSION
+Brigadier General Sule explained that although some of the suspects initially claimed they produced weapons solely to help members of their communities defend themselves against attacks, further investigations exposed a different reality.
+
+He said many of the suspects admitted that they also supplied a significant number of the locally manufactured firearms to Fulani militias because the groups offered more money.
+
+The military described the confessions as further evidence that financial greed has become a major driver of illegal arms trafficking and the prolonged cycle of violence in Plateau State.
+
+The disclosure comes amid intensified security operations targeting illegal arms manufacturers and dealers across the state.
+
+In an earlier operation in Vom, Jos South Local Government Area, troops raided illegal weapons production centres, arresting several suspects and recovering fabricated AK-47 rifles, revolver parts, ammunition-making equipment, and other industrial tools used in producing firearms.
+
+Similarly, operatives of the Department of State Services (DSS) arrested an alleged arms supplier, identified as Musa Abubakar, in Bassa Local Government Area. Security agencies said the suspect confessed to supplying sophisticated firearms and explosive materials to armed groups operating within the region.
+
+The military said it has continued to pursue fleeing members of the gunrunning syndicates while expanding intelligence operations aimed at locating hidden weapons factories, logistics hubs, and supply routes used by criminal networks.
+
+Authorities expressed confidence that dismantling the illegal arms production network would significantly weaken the capacity of violent groups responsible for recurring attacks and communal clashes across Plateau State.
+
+Security officials also appealed to residents to continue providing credible intelligence that would assist ongoing operations against illegal arms manufacturers and traffickers.
+
+Editor's Note
+The military's disclosure highlights the dangerous role that profit-driven arms trafficking plays in sustaining insecurity. Regardless of ethnicity or affiliation, anyone who manufactures or supplies weapons to violent groups contributes to the loss of innocent lives. Ending illegal arms production and strengthening intelligence-driven security operations remain essential to restoring lasting peace in Plateau State and other conflict-prone areas of Nigeria.
+
+✒️ By Noel Chiagorom — THE NATION'S EYES NEWSPAPER
+Seeing Beyond the Headlines, Telling the Truth Others Won't.`,
+    author: 'Noel Chiagorom',
+    date: '2026-06-27',
+    category: Category.SOCIETY,
+    imageUrl: 'https://i.ibb.co/JbMV8jV/The-Nation-s-Eyes-3.jpg',
+    readTime: '4 min',
+    status: 'published'
+  },
+  {
+    id: 'world-gates-epstein-testimony-2026',
+    title: 'Bill Gates Denies Knowledge of Epstein\'s Crimes, Admits He May Have Been Around Victims',
+    excerpt: 'During a voluntary closed-door testimony before the U.S. House Oversight Committee in June 2026, Bill Gates said he never witnessed or had any knowledge of the criminal activities of the late Jeffrey Epstein.',
+    content: `WASHINGTON, D.C. — During a voluntary closed-door testimony before the U.S. House Oversight Committee in June 2026, Bill Gates said he never witnessed or had any knowledge of the criminal activities of the late Jeffrey Epstein.
+
+Gates, however, acknowledged that he "may have been in the presence of victims", after lawmakers informed him that some of Epstein's female employees and administrative assistants he encountered were later identified as abuse victims.
+
+According to his testimony, Gates recalled seeing female staff members around Epstein, including two women who were seated in the front cabin of a private jet during one flight he took with Epstein. He described it as tragic to later discover that some of those women had been victimized.
+
+"NEVER VISITED THE ISLAND" — GATES' CATEGORICAL DENIAL
+The Microsoft co-founder firmly denied ever visiting Epstein's private island, New Mexico ranch, or Florida residence. He also categorically rejected any suggestion that he participated in or witnessed any illegal sexual activity involving Epstein.
+
+A PHILANTHROPIC COVER?
+Gates explained that his meetings with Epstein, which took place between 2011 and 2014, were centered on philanthropy. He said he hoped Epstein could introduce him to wealthy individuals who might contribute to global health and charitable initiatives.
+
+EPSTEIN'S ALLEGED EXTORTION ATTEMPT
+During the testimony, Gates also disclosed that Epstein later attempted to pressure him into renewing their relationship by threatening to expose Gates' past extramarital affair. Gates said he rejected the attempt and severed ties.
+
+The testimony was provided voluntarily to assist the U.S. House Oversight Committee in its ongoing review of records and issues related to the Epstein investigation.
+
+Editor's Note
+Gates' testimony forms part of a broader congressional effort to examine historical records connected to Jeffrey Epstein. While Gates acknowledged meeting Epstein on multiple occasions, he denied any awareness of Epstein's crimes at the time of those interactions.
+
+✒️ By Noel Chiagorom — THE NATION'S EYES NEWSPAPER
+Seeing Beyond the Headlines, Telling the Truth Others Won't.`,
+    author: 'Noel Chiagorom',
+    date: '2026-06-27',
+    category: Category.WORLD,
+    imageUrl: 'https://i.ibb.co/5x1h9dZP/The-Nation-s-Eyes-2.jpg',
+    readTime: '3 min',
+    status: 'published'
+  },
+  {
     id: 'editorial-ekwueme-blueprint-2026',
     title: 'Ekwueme’s Blueprint Nigeria Ignored — And Why We Are Paying for It Today',
     excerpt: 'At the 1995 Constitutional Conference, Alex Ekwueme presented a visionary political framework for Nigeria. Decades later, the nation is paying the price for ignoring it.',

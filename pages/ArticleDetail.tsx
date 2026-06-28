@@ -38,39 +38,28 @@ const ArticleDetail: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
-    if (id) {
-      console.log(`ArticleDetail mounted for id: ${id}, subscribing to post and comments...`);
-      const unsubscribePosts = firebaseService.subscribeToPosts((allPosts) => {
-        console.log(`ArticleDetail received ${allPosts.length} posts from Firebase.`);
-        const foundPost = allPosts.find(p => p.id === id);
-        if (foundPost) {
-          console.log(`Found current post: ${foundPost.title}`);
-          setPost(foundPost);
-          
-          // Get 5 recent posts excluding current
-          const recent = allPosts
-            .filter(p => p.id !== id && (!p.status || p.status === 'published'))
-            .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-            .slice(0, 5);
-          console.log(`Found ${recent.length} other published posts for sidebar.`);
-          setRecentPosts(recent);
-        } else {
-          console.warn(`Post with id ${id} not found in Firebase.`);
-        }
-      });
+    if (!id) return;
 
-      const unsubscribeComments = firebaseService.subscribeToComments((allComments) => {
-        console.log(`ArticleDetail received ${allComments.length} comments from Firebase.`);
-        const postComments = allComments.filter(c => c.postId === id && c.isApproved);
-        console.log(`Found ${postComments.length} approved comments for this post.`);
-        setComments(postComments);
-      });
+    const unsubscribePosts = firebaseService.subscribeToPosts((allPosts) => {
+      const foundPost = allPosts.find(p => p.id === id);
+      if (foundPost) {
+        setPost(foundPost);
+        const recent = allPosts
+          .filter(p => p.id !== id)
+          .slice(0, 5);
+        setRecentPosts(recent);
+      }
+    });
 
-      return () => {
-        unsubscribePosts();
-        unsubscribeComments();
-      };
-    }
+    const unsubscribeComments = firebaseService.subscribeToComments((allComments) => {
+      const postComments = allComments.filter(c => c.postId === id && c.isApproved);
+      setComments(postComments);
+    });
+
+    return () => {
+      unsubscribePosts();
+      unsubscribeComments();
+    };
   }, [id]);
 
   const handleCommentSubmit = async (e: React.FormEvent) => {
@@ -275,7 +264,13 @@ const ArticleDetail: React.FC = () => {
         <aside className="lg:col-span-1 space-y-12">
           
           {/* Ad Slot 1 */}
-          <AdPlaceholder size="h-64" />
+          <a href="https://wa.link/9kt28q" target="_blank" rel="noopener noreferrer" className="block">
+            <img
+              src="https://i.ibb.co/zTYymBpw/734367459-986961427516612-7885157747021528274-n.jpg"
+              alt="Advertisement"
+              className="w-full h-auto rounded-2xl shadow-sm border border-slate-200 hover:opacity-90 transition-opacity"
+            />
+          </a>
 
           {/* Recent Posts Section */}
           <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm">
@@ -308,7 +303,13 @@ const ArticleDetail: React.FC = () => {
           </div>
 
           {/* Ad Slot 2 */}
-          <AdPlaceholder size="h-[400px]" label="Sponsored Content" />
+          <a href="https://wa.link/9kt28q" target="_blank" rel="noopener noreferrer" className="block">
+            <img
+              src="https://i.ibb.co/5Qh4zKX/518014380-1327254962741480-8187086946583077665-n.jpg"
+              alt="Advertisement"
+              className="w-full h-auto rounded-2xl shadow-sm border border-slate-200 hover:opacity-90 transition-opacity"
+            />
+          </a>
 
           {/* Newsletter / Meta Information */}
           <div className="bg-slate-900 rounded-[2.5rem] p-10 text-center text-white shadow-2xl shadow-slate-200">

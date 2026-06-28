@@ -36,3 +36,6 @@ dist
 
 # OS files
 Thumbs.db
+
+# opencode config (contains secrets/tokens)
+opencode.json

@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet-async';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase';
 
-const ADMIN_EMAIL = 'netbiz0925@gmail.com';
+const ADMIN_EMAIL = import.meta.env.VITE_ADMIN_EMAIL || 'netbiz0925@gmail.com';
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -144,9 +144,14 @@ const Login: React.FC = () => {
           </form>
         </div>
 
-        <p className="mt-6 text-center text-xs text-slate-400">
-          Access restricted to authorized administrators only.
-        </p>
+        <div className="mt-6 text-center space-y-2">
+          <p className="text-xs text-slate-400">
+            Access restricted to authorized administrators only.
+          </p>
+          <a href="/" className="inline-block text-xs font-bold text-red-600 hover:text-red-700 transition-colors">
+            <i className="fas fa-arrow-left mr-1"></i> Back to homepage
+          </a>
+        </div>
       </div>
     </div>
   );

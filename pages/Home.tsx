@@ -40,21 +40,7 @@ const Home: React.FC = () => {
   const [filter, setFilter] = useState<string>('All');
 
   useEffect(() => {
-    console.log('Home component mounted, subscribing to posts...');
-    const unsubscribe = firebaseService.subscribeToPosts((allPosts) => {
-      console.log('Received posts from Firebase:', allPosts.length);
-      if (allPosts.length === 0) {
-        console.warn('No posts received from Firebase. Checking if migration is needed...');
-      }
-      const publishedPosts = allPosts
-        .filter(p => !p.status || p.status === 'published')
-        .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-      console.log('Filtered published posts:', publishedPosts.length);
-      if (allPosts.length > 0 && publishedPosts.length === 0) {
-        console.warn('Posts exist but none are published. First post status:', allPosts[0].status);
-      }
-      setPosts(publishedPosts);
-    });
+    const unsubscribe = firebaseService.subscribeToPosts(setPosts);
     return () => unsubscribe();
   }, []);
 
@@ -79,8 +65,30 @@ const Home: React.FC = () => {
     : posts.filter(p => p.category === filter);
 
   const heroPosts = posts.slice(0, 5);
+  const topSix = posts.slice(0, 6);
   const remainingPosts = filter === 'All' ? posts : filteredPosts;
-  const politicsPosts = posts.filter(p => p.category === Category.POLITICS).slice(0, 6);
+
+  const usedIds = new Set(topSix.map(p => p.id));
+
+  const economySocietyPosts = posts
+    .filter(p => !usedIds.has(p.id) && (p.category === Category.ECONOMY || p.category === Category.SOCIETY))
+    .slice(0, 6);
+
+  economySocietyPosts.forEach(p => usedIds.add(p.id));
+
+  const politicsPosts = posts
+    .filter(p => !usedIds.has(p.id) && p.category === Category.POLITICS)
+    .slice(0, 9);
+
+  politicsPosts.forEach(p => usedIds.add(p.id));
+
+  const editorialPosts = posts
+    .filter(p => !usedIds.has(p.id) && p.category === Category.EDITORIAL)
+    .slice(0, 6);
+
+  editorialPosts.forEach(p => usedIds.add(p.id));
+
+  const otherPosts = posts.filter(p => !usedIds.has(p.id));
 
   const isCategory = !!categoryName;
   const seoTitle = isCategory ? `${categoryName} News & Analysis` : 'Nigerian News, Politics & Editorial Analysis';
@@ -101,6 +109,8 @@ const Home: React.FC = () => {
     },
   };
 
+  const showSections = filter === 'All' && !categoryName;
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 md:py-16">
       <SEO
@@ -110,61 +120,87 @@ const Home: React.FC = () => {
         type="website"
         jsonLd={jsonLd}
       />
-      {/* Hero Slider Section - Hidden on category archive pages */}
-      {filter === 'All' && heroPosts.length > 0 && !categoryName && (
+
+      {/* Hero Slider */}
+      {showSections && heroPosts.length > 0 && (
         <div className="animate-in fade-in zoom-in-95 duration-700">
           <HeroSlider posts={heroPosts} />
         </div>
       )}
 
-      {/* Trending Feed Section */}
-      <div className="mb-20">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-100 pb-4 mb-10">
-           <h2 className="text-xl md:text-2xl font-[900] tracking-tight text-slate-900 uppercase italic whitespace-nowrap">
-            {filter === 'All' ? 'Trending' : filter} <span className="text-red-600">Feed</span>
-           </h2>
-           
-           {/* Horizontal Scroll for Categories - Optimized for Mobile */}
-           <div className="relative w-full md:w-auto overflow-hidden">
-             {/* Left Shadow Hint (Only visible when scrolled) */}
-             <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none md:hidden opacity-50"></div>
-             
-             <div className="flex flex-nowrap items-center gap-x-2 overflow-x-auto no-scrollbar py-2 -mx-4 px-4 md:mx-0 md:px-0 scroll-smooth touch-pan-x">
-              {['All', ...Object.values(Category)].map(cat => (
-                <button
-                  key={cat}
-                  onClick={() => handleFilterClick(cat)}
-                  className={`px-5 py-2 text-[9px] md:text-[11px] font-black rounded-full transition-all duration-300 uppercase tracking-widest no-underline whitespace-nowrap active:scale-90 border-2 shadow-sm ${
-                    filter === cat 
-                      ? 'bg-red-600 text-white border-red-600 shadow-md shadow-red-200' 
-                      : 'text-slate-600 bg-white border-slate-100 hover:border-red-600 hover:text-red-600'
-                  }`}
-                >
-                  {cat}
-                </button>
-              ))}
-            </div>
-            
-            {/* Right Shadow Hint (Visible to show there's more content) */}
-            <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none md:hidden"></div>
+      {/* Category Filter Bar */}
+      <div className={`mb-10 ${showSections ? 'mt-10' : ''}`}>
+        <div className="relative w-full overflow-hidden">
+          <div className="flex flex-nowrap items-center gap-x-2 overflow-x-auto no-scrollbar py-2 -mx-4 px-4 md:mx-0 md:px-0 scroll-smooth touch-pan-x">
+            {['All', ...Object.values(Category)].map(cat => (
+              <button
+                key={cat}
+                onClick={() => handleFilterClick(cat)}
+                className={`px-5 py-2 text-[9px] md:text-[11px] font-black rounded-full transition-all duration-300 uppercase tracking-widest no-underline whitespace-nowrap active:scale-90 border-2 shadow-sm ${
+                  filter === cat 
+                    ? 'bg-red-600 text-white border-red-600 shadow-md shadow-red-200' 
+                    : 'text-slate-600 bg-white border-slate-100 hover:border-red-600 hover:text-red-600'
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
           </div>
-        </div>
-
-        {/* Grid for Trending Feed */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {remainingPosts.map((post, index) => (
-            <div key={post.id} className="animate-in fade-in slide-in-from-bottom-8 duration-700 fill-mode-both" style={{ animationDelay: `${index * 100}ms` }}>
-              <ArticleCard post={post} />
-            </div>
-          ))}
         </div>
       </div>
 
-      {/* Politics Section - Only on Home page */}
-      {filter === 'All' && !categoryName && politicsPosts.length > 0 && (
+      {/* TRENDING — First 6 Recent Posts */}
+      {showSections && topSix.length > 0 && (
+        <section className="mb-24 animate-in fade-in slide-in-from-bottom-8 duration-700">
+          <div className="mb-8">
+            <h2 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight mb-2 uppercase">Trending <span className="text-red-600">Feed</span></h2>
+            <div className="h-1 w-full bg-red-600 rounded-full"></div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {topSix.map((post, index) => (
+              <div key={post.id} className="animate-in fade-in slide-in-from-bottom-8 duration-700 fill-mode-both" style={{ animationDelay: `${index * 100}ms` }}>
+                <ArticleCard post={post} />
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* AD — Leaderboard */}
+      {showSections && (
+        <div className="mb-24 flex justify-center animate-in fade-in zoom-in-110 duration-700">
+          <a href="https://wa.link/9kt28q" target="_blank" rel="noopener noreferrer" className="block">
+            <img
+              src="https://i.ibb.co/fYZ15Ccq/GROW-YOUR-BUSINESS.jpg"
+              alt="Advertisement"
+              className="w-full max-w-[728px] h-auto rounded-xl shadow-sm border border-slate-200 hover:opacity-90 transition-opacity"
+            />
+          </a>
+        </div>
+      )}
+
+      {/* ECONOMY / SOCIETY */}
+      {showSections && economySocietyPosts.length > 0 && (
         <section className="mb-24 animate-in fade-in slide-in-from-bottom-8 duration-1000">
           <div className="mb-8">
-            <h2 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight mb-2 uppercase">POLITICS</h2>
+            <h2 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight mb-2 uppercase">Economy & <span className="text-red-600">Society</span></h2>
+            <div className="h-1 w-full bg-amber-500 rounded-full"></div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {economySocietyPosts.map((post, index) => (
+              <div key={post.id} className="animate-in fade-in slide-in-from-bottom-8 duration-700 fill-mode-both" style={{ animationDelay: `${index * 100}ms` }}>
+                <ArticleCard post={post} />
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* POLITICS */}
+      {showSections && politicsPosts.length > 0 && (
+        <section className="mb-24 animate-in fade-in slide-in-from-bottom-8 duration-1000">
+          <div className="mb-8">
+            <h2 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight mb-2 uppercase">Politics</h2>
             <div className="h-1 w-full bg-red-600 rounded-full"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10">
@@ -175,13 +211,80 @@ const Home: React.FC = () => {
         </section>
       )}
 
-      {remainingPosts.length === 0 && (
-        <div className="text-center py-32 bg-white rounded-3xl shadow-sm border border-slate-100 animate-in fade-in zoom-in-95 duration-500">
-          <div className="w-20 h-20 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-6">
-            <i className="fas fa-newspaper text-3xl text-slate-200"></i>
+      {/* EDITORIAL */}
+      {showSections && editorialPosts.length > 0 && (
+        <section className="mb-24 animate-in fade-in slide-in-from-bottom-8 duration-1000">
+          <div className="mb-8">
+            <h2 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight mb-2 uppercase">Editorial</h2>
+            <div className="h-1 w-full bg-blue-600 rounded-full"></div>
           </div>
-          <h3 className="text-2xl font-black text-slate-900 uppercase tracking-widest mb-2">Blank Edition</h3>
-          <p className="text-slate-400">Our reporters are currently working on stories for this section.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10">
+            {editorialPosts.map(post => (
+              <CompactArticleCard key={post.id} post={post} />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* AD — Medium Rectangle (×2) */}
+      {showSections && (
+        <div className="mb-24 flex flex-col md:flex-row items-center justify-center gap-6">
+          <a href="https://wa.link/9kt28q" target="_blank" rel="noopener noreferrer" className="block">
+            <img
+              src="https://i.ibb.co/zTYymBpw/734367459-986961427516612-7885157747021528274-n.jpg"
+              alt="Advertisement"
+              className="w-full max-w-[300px] h-auto rounded-xl shadow-sm border border-slate-200 hover:opacity-90 transition-opacity"
+            />
+          </a>
+          <a href="https://wa.link/9kt28q" target="_blank" rel="noopener noreferrer" className="block">
+            <img
+              src="https://i.ibb.co/5Qh4zKX/518014380-1327254962741480-8187086946583077665-n.jpg"
+              alt="Advertisement"
+              className="w-full max-w-[300px] h-auto rounded-xl shadow-sm border border-slate-200 hover:opacity-90 transition-opacity"
+            />
+          </a>
+        </div>
+      )}
+
+      {/* OTHERS — World, Sports, Entertainment */}
+      {showSections && otherPosts.length > 0 && (
+        <section className="mb-24 animate-in fade-in slide-in-from-bottom-8 duration-1000">
+          <div className="mb-8">
+            <h2 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight mb-2 uppercase">More <span className="text-red-600">Coverage</span></h2>
+            <div className="h-1 w-full bg-slate-400 rounded-full"></div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {otherPosts.map((post, index) => (
+              <div key={post.id} className="animate-in fade-in slide-in-from-bottom-8 duration-700 fill-mode-both" style={{ animationDelay: `${index * 100}ms` }}>
+                <ArticleCard post={post} />
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Category archive view */}
+      {!showSections && (
+        <div>
+          <div className="mb-8">
+            <h2 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight mb-2 uppercase">{filter} <span className="text-red-600">Archive</span></h2>
+            <div className="h-1 w-full bg-red-600 rounded-full"></div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {remainingPosts.length > 0 ? remainingPosts.map((post, index) => (
+              <div key={post.id} className="animate-in fade-in slide-in-from-bottom-8 duration-700 fill-mode-both" style={{ animationDelay: `${index * 100}ms` }}>
+                <ArticleCard post={post} />
+              </div>
+            )) : (
+              <div className="col-span-full text-center py-32 bg-white rounded-3xl shadow-sm border border-slate-100">
+                <div className="w-20 h-20 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <i className="fas fa-newspaper text-3xl text-slate-200"></i>
+                </div>
+                <h3 className="text-2xl font-black text-slate-900 uppercase tracking-widest mb-2">Blank Edition</h3>
+                <p className="text-slate-400">Our reporters are currently working on stories for this section.</p>
+              </div>
+            )}
+          </div>
         </div>
       )}
     </div>

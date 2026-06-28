@@ -87,13 +87,11 @@ const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose }) => {
 
   const highlightMatch = (text: string, keywords: string[]) => {
     if (keywords.length === 0) return text;
-    const pattern = keywords
-      .map(k => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
-      .join('|');
-    const regex = new RegExp(`(${pattern})`, 'gi');
+    const escaped = keywords.map(k => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
+    const regex = new RegExp(`(${escaped})`, 'gi');
     const parts = text.split(regex);
     return parts.map((part, i) =>
-      regex.test(part)
+      i % 2 === 1
         ? <mark key={i} className="bg-yellow-200 text-slate-900 rounded px-0.5 font-bold">{part}</mark>
         : part
     );

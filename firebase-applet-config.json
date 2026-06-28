@@ -1,10 +1,8 @@
 {
-  "projectId": "zero-to-production-db",
-  "appId": "1:61608996348:web:12de4bf5464b0d5f9f1679",
-  "apiKey": "AIzaSyAr_7d2qNBAYwUO4APdXQigBMEdrUUTxhw",
-  "authDomain": "zero-to-production-db.firebaseapp.com",
-  "firestoreDatabaseId": "ai-studio-72548b1f-f2ae-445f-b0e7-04feaffdf3e7",
-  "storageBucket": "zero-to-production-db.firebasestorage.app",
-  "messagingSenderId": "61608996348",
-  "measurementId": ""
+  "projectId": "nationseyes",
+  "appId": "1:778262972365:web:53883e94789af945466684",
+  "apiKey": "AIzaSyAMWvegTyKKso_Fa-AzCEJSnEeWC4y7sUc",
+  "authDomain": "nationseyes.firebaseapp.com",
+  "storageBucket": "nationseyes.firebasestorage.app",
+  "messagingSenderId": "778262972365"
 }

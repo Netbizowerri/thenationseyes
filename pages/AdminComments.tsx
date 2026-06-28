@@ -7,11 +7,7 @@ const AdminComments: React.FC = () => {
   const [comments, setComments] = useState<Comment[]>([]);
 
   useEffect(() => {
-    console.log('AdminComments mounted, subscribing to all comments...');
-    const unsubscribe = firebaseService.subscribeToComments((allComments) => {
-      console.log(`AdminComments received ${allComments.length} comments from Firebase.`);
-      setComments(allComments.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()));
-    }, false);
+    const unsubscribe = firebaseService.subscribeToComments(setComments, false);
     return () => unsubscribe();
   }, []);
 

@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { firebaseService } from '../services/firebaseService';
+import { storageService } from '../services/storageService';
 import { Post, Comment } from '../types';
 import { Link } from 'react-router-dom';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
@@ -8,17 +9,12 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 const AdminDashboard: React.FC = () => {
   const [posts, setPosts] = useState<Post[]>([]);
   const [comments, setComments] = useState<Comment[]>([]);
+  const [migrating, setMigrating] = useState(false);
+  const [migrateMsg, setMigrateMsg] = useState('');
 
   useEffect(() => {
-    console.log('AdminDashboard mounted, subscribing to posts and comments...');
-    const unsubscribePosts = firebaseService.subscribeToPosts((allPosts) => {
-      console.log(`AdminDashboard received ${allPosts.length} posts from Firebase.`);
-      setPosts(allPosts);
-    }, false);
-    const unsubscribeComments = firebaseService.subscribeToComments((allComments) => {
-      console.log(`AdminDashboard received ${allComments.length} comments from Firebase.`);
-      setComments(allComments);
-    }, false);
+    const unsubscribePosts = firebaseService.subscribeToPosts(setPosts, false);
+    const unsubscribeComments = firebaseService.subscribeToComments(setComments, false);
     return () => {
       unsubscribePosts();
       unsubscribeComments();
@@ -72,6 +68,40 @@ const AdminDashboard: React.FC = () => {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Migration tool */}
+      <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+        <div className="flex items-center justify-between">
+          <div>
+            <h3 className="text-lg font-bold text-slate-900">Sync Local Posts to Firebase</h3>
+            <p className="text-sm text-slate-500 mt-1">Push all posts from constants.tsx into Firestore if missing.</p>
+          </div>
+          <button
+            onClick={async () => {
+              setMigrating(true);
+              setMigrateMsg('');
+              try {
+                await storageService.migrateToFirebase();
+                setMigrateMsg('Migration complete. Refresh the homepage to see new posts.');
+              } catch (err: any) {
+                console.error('Migration error:', err);
+                setMigrateMsg('Error: ' + (err.message || err.toString() || 'Unknown error. Check browser console (F12).'));
+              }
+              setMigrating(false);
+            }}
+            disabled={migrating}
+            className="bg-slate-900 text-white px-5 py-2.5 rounded-lg font-bold text-sm hover:bg-slate-800 disabled:opacity-50 shadow-sm flex items-center gap-2"
+          >
+            {migrating ? <><i className="fas fa-spinner fa-spin"></i> Migrating...</> : <><i className="fas fa-cloud-upload-alt"></i> Migrate Now</>}
+          </button>
+        </div>
+        {migrateMsg && (
+          <p className={`mt-3 text-sm font-medium ${migrateMsg.includes('Error') ? 'text-red-600' : 'text-green-600'}`}>
+            <i className={`fas ${migrateMsg.includes('Error') ? 'fa-exclamation-circle' : 'fa-check-circle'} mr-1`}></i>
+            {migrateMsg}
+          </p>
+        )}
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

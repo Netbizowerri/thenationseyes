@@ -2,57 +2,35 @@ import { Post, Comment, User } from '../types';
 import { INITIAL_POSTS } from '../constants';
 import { firebaseService } from './firebaseService';
 
-const POSTS_KEY = 'nations_eyes_posts_v17';
+const POSTS_KEY = 'nations_eyes_posts_v18';
 const COMMENTS_KEY = 'nations_eyes_comments';
 
 export const storageService = {
   // Migration logic
   migrateToFirebase: async () => {
-    try {
-      console.log('Checking for existing posts in Firebase...');
-      const existingPosts = await firebaseService.getPosts(false);
-      console.log(`Found ${existingPosts.length} posts in Firebase.`);
-      
-      const localPosts = storageService.getPosts();
-      console.log(`Local posts to consider for migration: ${localPosts.length}`);
-      
-      // Migrate posts that don't exist in Firebase
-      let migratedCount = 0;
-      for (const post of localPosts) {
-        const exists = existingPosts.some(p => p.id === post.id);
-        if (!exists) {
-          console.log(`Migrating post: ${post.title} (${post.id})`);
-          // Ensure status is set
-          if (!post.status) post.status = 'published';
-          await firebaseService.savePost(post);
-          migratedCount++;
-        }
+    console.log('Migration started...');
+    const existingPosts = await firebaseService.getPosts(false);
+    console.log(`Found ${existingPosts.length} posts in Firebase.`);
+    
+    const localPosts = storageService.getPosts();
+    console.log(`Local posts to consider for migration: ${localPosts.length}`);
+    
+    // Migrate posts that don't exist in Firebase
+    let migratedCount = 0;
+    for (const post of localPosts) {
+      const exists = existingPosts.some(p => p.id === post.id);
+      if (!exists) {
+        console.log(`Migrating post: ${post.title} (${post.id})`);
+        if (!post.status) post.status = 'published';
+        await firebaseService.savePost(post);
+        migratedCount++;
       }
-      
-      if (migratedCount > 0) {
-        console.log(`Migrated ${migratedCount} new posts to Firebase.`);
-      } else {
-        console.log('No new posts to migrate.');
-      }
-
-      // Migrate comments if none exist
-      console.log('Checking for existing comments in Firebase...');
-      const existingComments = await firebaseService.getComments(false);
-      console.log(`Found ${existingComments.length} comments in Firebase.`);
-      
-      if (existingComments.length === 0) {
-        const localComments = storageService.getComments();
-        if (localComments.length > 0) {
-          console.log(`Migrating ${localComments.length} local comments to Firebase...`);
-          for (const comment of localComments) {
-            if (comment.isApproved === undefined) comment.isApproved = true;
-            await firebaseService.addComment(comment);
-          }
-          console.log('Comments migration complete.');
-        }
-      }
-    } catch (error) {
-      console.error('Migration failed with error:', error);
+    }
+    
+    if (migratedCount > 0) {
+      console.log(`Migrated ${migratedCount} new posts to Firebase.`);
+    } else {
+      console.log('No new posts to migrate.');
     }
   },
 

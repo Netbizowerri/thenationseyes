@@ -18,11 +18,7 @@ const AdminPosts: React.FC = () => {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    console.log('AdminPosts mounted, subscribing to all posts...');
-    const unsubscribe = firebaseService.subscribeToPosts((allPosts) => {
-      console.log(`AdminPosts received ${allPosts.length} posts from Firebase.`);
-      setPosts(allPosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()));
-    }, false);
+    const unsubscribe = firebaseService.subscribeToPosts(setPosts, false);
     return () => unsubscribe();
   }, []);
 
