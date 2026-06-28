@@ -102,6 +102,292 @@ Seeing Beyond the Headlines, Telling the Truth Others Won't.`,
     status: 'published'
   },
   {
+    id: 'editorial-ngor-okpala-deserves-better-2026',
+    title: 'NGOR OKPALA DESERVES BETTER: THE TIME FOR POLITICAL TITLES IS OVER—THE TIME FOR RESULTS IS NOW',
+    excerpt: 'Ngor Okpala LGA has four commissioners in the state executive yet residents see little evidence of government presence. This editorial calls for coordinated leadership and tangible development.',
+    content: `Ngor Okpala Local Government Area is blessed to have four notable commissioners serving in the administration of Governor Hope Uzodinma—Prof. B. G. Nworgu, Hon. Enyinnaya Onuegbu, Hon. Bede Eke, and Dr. Mrs. Chioma Vivian Egu. With such impressive representation in the state executive, one would naturally expect Ngor Okpala to be among the beneficiaries of impactful government projects.
+
+Yet, many residents continue to ask a simple question: Where is the evidence of government presence in Ngor Okpala?
+
+ONE PROJECT THAT MATTERS
+One project that deserves immediate attention is the construction of the Ulakwo–Umuneke road, linking Ulakwo to the Ngor Okpala Local Government Headquarters. Equally important is the Ulakwo–Imerienwe–Etche road, which would connect Imo State to neighboring Rivers State, stimulate commerce, improve transportation, and enhance economic activities for thousands of residents.
+
+GOVERNOR'S GOODWILL TOWARD THE AREA
+Governor Hope Uzodinma has demonstrated confidence in Ngor Okpala through key appointments. Many also point to his cordial relationship with respected elder statesman Prince Lemmy Akakem (popularly known as Okpataozuoha), the appointment of Dr. Mrs. Chioma Vivian Egu as Commissioner for Health, and the emergence of Hon. Obinna Egu for a third term in the Imo State House of Assembly as further evidence of the governor's goodwill toward the area.
+
+This goodwill should be reciprocated with coordinated leadership. The commissioners and other political office holders from Ngor Okpala, particularly those elected on the APC platform, should come together as one family and collectively present the developmental needs of their people to the governor.
+
+THE TRUE TEST OF POLITICAL RELEVANCE
+The true test of political relevance is not the number of appointments an area has but the tangible development those appointments attract.
+
+If four commissioners cannot jointly secure a meaningful road project for Ngor Okpala, many people will naturally begin to question the influence they wield within the government. Likewise, there is the lingering land dispute involving Evangelist Ebuka Obi's Zion Ministry and the people of Mbaisii. As the highest-ranking representatives of Ngor Okpala in the state executive, many residents expect them to facilitate dialogue with the state government and other stakeholders toward a peaceful and lasting resolution.
+
+Political appointments should never be reduced to ceremonial titles. They should serve as instruments for solving problems, attracting development, and giving the people a voice at the highest level of government.
+
+If four commissioners cannot collectively secure an appointment with their principal to present the pressing needs of Ngor Okpala and advocate for critical infrastructure and peaceful resolution of local disputes, then their positions risk being viewed by the public as symbolic rather than impactful. Leadership is measured by results, not by official titles.
+
+As the 2027 election season gradually approaches, the APC in Ngor Okpala will need concrete achievements to present to the electorate. Roads, infrastructure, peace, and visible government presence will speak far louder than campaign promises.
+
+The people of Ngor Okpala deserve development that matches their representation in government. The time has come for the area's political leaders to put aside personal interests, unite with one voice, and use the access their offices provide to deliver meaningful progress for the people they were appointed to serve.
+
+Editor's Note
+This article expresses the author's opinion on the need for greater collaboration among political office holders from Ngor Okpala to advocate for infrastructure development and the peaceful resolution of community issues. It reflects the author's analysis and views.
+
+✒️ By Noel Chiagorom — THE NATION'S EYES NEWSPAPER
+Seeing Beyond the Headlines, Telling the Truth Others Won't.`,
+    author: 'Noel Chiagorom',
+    date: '2026-06-26',
+    category: Category.EDITORIAL,
+    imageUrl: 'https://i.ibb.co/wFNpbKtf/The-Nation-s-Eyes-9.jpg',
+    readTime: '5 min',
+    status: 'published'
+  },
+  {
+    id: 'politics-ndc-registration-overturned-2026',
+    title: 'Court Overturns NDC Registration Order; Party Heads to Appeal Despite 2027 Preparations',
+    excerpt: 'The Federal High Court sitting in Lokoja has overturned its earlier judgment that directed INEC to register the Nigeria Democratic Congress (NDC) as a political party, triggering a fresh legal battle ahead of 2027.',
+    content: `The Federal High Court sitting in Lokoja has overturned its earlier judgment that directed the Independent National Electoral Commission (INEC) to register the Nigeria Democratic Congress (NDC) as a political party, triggering a fresh legal battle ahead of the 2027 general elections.
+
+Delivering the ruling, Justice Isah Dashen set aside the court's December 10, 2025 judgment after finding that it infringed upon the rights of the Peace Movement Party (PMP), whose logo had allegedly been submitted to INEC before the NDC adopted a similar emblem during its registration process.
+
+The court held that the previous order adversely affected the legal rights of the PMP and consequently directed all parties involved to return to the positions they occupied before the December 2025 judgment was delivered.
+
+NDC REJECTS JUDGMENT
+Reacting to the ruling, NDC National Chairman, Moses Cleopas, rejected the decision, describing it as legally flawed and announcing that the party has instructed its legal team to file an immediate appeal before the Court of Appeal.
+
+According to Cleopas, the judgment does not amount to the deregistration of the party, stressing that the court merely vacated its earlier order without expressly cancelling the NDC's legal status.
+
+He further argued that the Federal High Court had become functus officio after delivering its final judgment in December 2025, maintaining that it lacked the jurisdiction to revisit and overturn its own decision.
+
+2027 PLANS UNAFFECTED
+Despite the legal setback, the NDC insists that its preparations for the 2027 general elections remain firmly on course.
+
+The party disclosed that it has already concluded nationwide congresses and primary elections while successfully producing candidates for every major elective office, including its presidential and vice-presidential tickets as well as National Assembly candidates.
+
+Party officials maintain that the ongoing legal disputes will not derail their electoral ambitions.
+
+FRESH LEGAL CHALLENGES
+The Lokoja judgment is not the only legal hurdle confronting the opposition party.
+
+A separate suit currently before the Federal High Court in Abuja, filed by a protem official of the All Democratic Alliance (ADA), is seeking to nullify the NDC's registration over alleged procedural irregularities surrounding INEC's recognition of the party.
+
+Internally, the NDC is also battling growing discontent following its primary elections.
+
+Several senior executives of the party in Ebonyi State recently resigned collectively, while some aggrieved aspirants, particularly in Warri, have threatened legal action over allegations that the party leadership ignored valid primary election results.
+
+OPPOSITION COALITION STILL INTACT
+Notwithstanding its mounting legal and internal challenges, the NDC continues to attract prominent opposition figures seeking a united platform ahead of the 2027 elections.
+
+The party has emerged as a major rallying point for opposition politicians, with notable personalities including former Bayelsa State Governor Senator Henry Seriake Dickson and former Labour Party presidential candidate Peter Obi aligning with the platform in a bid to mount a formidable challenge to the ruling APC.
+
+The outcome of the Court of Appeal proceedings could therefore prove decisive, not only for the NDC's political future but also for the configuration of Nigeria's opposition ahead of the 2027 general elections.
+
+Editor's Note
+The legal contest surrounding the NDC underscores how disputes over party registration and compliance with electoral procedures can have far-reaching political consequences. As appeals progress and additional lawsuits unfold, the judiciary's interpretation of electoral law is likely to play a significant role in shaping the landscape of the 2027 elections.
+
+✒️ By Noel Chiagorom — THE NATION'S EYES NEWSPAPER
+Seeing Beyond the Headlines, Telling the Truth Others Won't.`,
+    author: 'Noel Chiagorom',
+    date: '2026-06-26',
+    category: Category.POLITICS,
+    imageUrl: 'https://i.ibb.co/Xfq54Vn1/731068472-3953349064961113-4952706705788304806-n.jpg',
+    readTime: '5 min',
+    status: 'published'
+  },
+  {
+    id: 'society-yobe-landmark-jaw-surgery-2026',
+    title: '6-Hour Landmark Surgery in Yobe Marks New Era for Specialized Healthcare in Northeast Nigeria',
+    excerpt: 'The Yobe State Specialist Hospital has successfully performed its first-ever complex lower-jaw reconstruction surgery, a landmark achievement for specialized healthcare in Northeast Nigeria.',
+    content: `In a remarkable demonstration of Nigeria's growing medical expertise, the Yobe State Specialist Hospital has successfully performed its first-ever complex lower-jaw reconstruction surgery, a landmark achievement that signals a major leap in specialized healthcare delivery in Northeast Nigeria.
+
+The historic six-hour operation was carried out on Acca Girgiri Sheriff, a 40-year-old mother of six from Bursari Local Government Area, who had been living with mandibular ameloblastoma, a rare but aggressive jaw tumour capable of destroying the jawbone and severely affecting a person's ability to eat, speak and smile.
+
+THE SURGICAL TEAM BEHIND THE MILESTONE
+The highly specialized procedure was led by Dr. Muhammad Ayuba Fusami, alongside Dr. Usman Abba Geidam and a multidisciplinary team of surgeons. During the painstaking operation, the diseased portion of the patient's lower jaw was removed and reconstructed using a bone graft harvested from her own hip (iliac crest).
+
+Speaking after the successful surgery, Dr. Geidam described the achievement as a reflection of the Yobe State Government's sustained investment in the health sector and the hospital's growing capacity to deliver advanced head-and-neck reconstructive care.
+
+The patient is currently in stable condition and responding positively to postoperative treatment.
+
+TRANSFORMING ACCESS TO SPECIALIZED CARE
+The milestone is expected to transform access to specialized maxillofacial surgery across Northeast Nigeria, reducing the financial burden and emotional strain on patients who previously had to seek treatment in distant cities or abroad.
+
+A VICTORY FOR NIGERIAN MEDICINE
+This breakthrough is yet another reminder that Nigerian healthcare professionals continue to make remarkable strides despite numerous challenges. It underscores the importance of sustained investment in healthcare infrastructure, specialist training and modern medical equipment.
+
+As Nigeria continues to build its capacity in advanced medicine, achievements such as this inspire confidence that world-class healthcare can increasingly be provided within the country's borders.
+
+Congratulations to the dedicated team of Nigerian surgeons whose expertise has restored not only a patient's jaw but also her hope and smile.
+
+Editor's Note
+This historic surgery is a powerful reminder that with investment, commitment and skilled professionals, Nigeria's healthcare system can achieve world-class results. The Nation's Eyes Newspaper celebrates this remarkable medical milestone and salutes the doctors, nurses and entire surgical team whose dedication continues to save lives and restore hope.
+
+✒️ By Noel Chiagorom — THE NATION'S EYES NEWSPAPER
+Seeing Beyond the Headlines, Telling the Truth Others Won't.`,
+    author: 'Noel Chiagorom',
+    date: '2026-06-26',
+    category: Category.SOCIETY,
+    imageUrl: 'https://i.ibb.co/0RpZQvLh/731185852-1949379242386358-7039231675094847359-n.jpg',
+    readTime: '4 min',
+    status: 'published'
+  },
+  {
+    id: 'entertainment-cubana-chief-priest-political-ambition-2026',
+    title: '"I Have Everything Else, The Only Thing Left Is Power And I Must Get It" — Cubana Chief Priest Declares Political Ambition',
+    excerpt: 'Nigerian socialite, businessman and nightlife entrepreneur Pascal Okechukwu, popularly known as Cubana Chief Priest, has openly declared that political power is the only achievement he believes is left for him to attain.',
+    content: `Nigerian socialite, businessman and nightlife entrepreneur Pascal Okechukwu, popularly known as Cubana Chief Priest, has openly declared that political power is the only achievement he believes is left for him to attain after years of building wealth, fame and influence.
+
+In a social media post on Friday, June 26, 2026, the celebrity businessman wrote:
+
+> "Over a decade of consistency CP no small. Tell me that thing wey I never get. It's just power! I don use this social media get everything, na power remain and I go collect am."
+
+The statement is widely seen as a reaffirmation of his political ambitions ahead of the 2027 general elections, where he is seeking to represent the Orsu/Orlu/Oru East Federal Constituency in the House of Representatives of Nigeria.
+
+A POLITICAL JOURNEY UNDETERRED
+His declaration comes shortly after he suffered a setback in the All Progressives Congress (APC) primary process, where reports indicated he secured only a handful of votes. The outcome attracted widespread criticism and mockery from some social media users, but the businessman has responded by insisting that his political journey is far from over.
+
+According to Cubana Chief Priest, the same principles that transformed him into one of Nigeria's most recognizable entrepreneurs—apprenticeship, loyalty, service, patience, respect and hard work—will also guide his quest for public office.
+
+ALIGNMENT WITH THE CITY BOY MOVEMENT
+Beyond his personal ambition, he has become a visible figure within the City Boy Movement, a youth-driven political campaign supporting the re-election of President Bola Ahmed Tinubu in 2027.
+
+His alignment with the ruling APC has, however, generated mixed reactions, particularly among some South-East youths who criticized his decision after he previously expressed support for Peter Obi. Cubana Chief Priest has defended his position, arguing that working with the party at the centre offers the South-East greater opportunities to attract federal projects and advance regional interests, including continued advocacy for the release of Nnamdi Kanu.
+
+Whether his popularity in entertainment and business can translate into electoral success remains one of the political stories to watch as preparations for the 2027 elections gather momentum.
+
+📰 THE NATION'S EYES NEWSPAPER
+Seeing Beyond the Headlines, Telling the Truth Others Won't.`,
+    author: 'Noel Chiagorom',
+    date: '2026-06-26',
+    category: Category.ENTERTAINMENT,
+    imageUrl: 'https://i.ibb.co/SX28WXtp/733448562-1716054659587703-5570241080064067981-n.jpg',
+    readTime: '3 min',
+    status: 'published'
+  },
+  {
+    id: 'politics-makinde-rescue-oyo-pupils-2026',
+    title: 'Rescue of Abducted Oyo Pupils, Teachers Remain My Administration\'s Top Priority — Makinde',
+    excerpt: 'Governor Makinde reaffirms the rescue of abducted Oyo pupils and teachers as a top priority, detailing ongoing operations and security measures.',
+    content: `Governor Seyi Makinde has reaffirmed that the rescue of abducted pupils and teachers in Oyo State remains a top priority of his administration, as security forces intensify operations to secure their safe release.
+
+Speaking on the ongoing efforts, the governor assured residents that no resource would be spared in ensuring the safe return of the captives.
+
+The abduction, which has sent shockwaves through the state, has triggered a robust response from security agencies working in coordination with the state government.
+
+Governor Makinde provided an update on the security operations, noting that all available assets have been deployed to track down the perpetrators and secure the victims' release.
+
+He called on residents to remain calm and cooperate with security operatives, stressing that the government is fully committed to protecting lives and property.
+
+The governor also reassured the affected families that the administration is doing everything within its power to bring their loved ones home safely.
+
+Security sources confirmed that joint operations involving multiple agencies are ongoing, with tactical teams deployed to comb areas where the victims are believed to be held.
+
+The abduction has drawn widespread condemnation from citizens, civil society groups, and political leaders, all calling for urgent action to end the rising insecurity in the region.
+
+Editor's Note
+The abduction of schoolchildren remains one of the most painful realities of Nigeria's security crisis. While Governor Makinde's commitment is reassuring, the ultimate test lies in the timely and safe rescue of the victims. Every moment counts, and Nigerians expect decisive action rather than just words.
+
+✒️ By Noel Chiagorom — THE NATION'S EYES NEWSPAPER
+Seeing Beyond the Headlines, Telling the Truth Others Won't.`,
+    author: 'Noel Chiagorom',
+    date: '2026-06-26',
+    category: Category.POLITICS,
+    imageUrl: 'https://i.ibb.co/XZxR5gR2/731094514-996409126722957-888265893706590454-n.jpg',
+    readTime: '3 min',
+    status: 'published'
+  },
+  {
+    id: 'politics-tinubu-health-tech-office-2026',
+    title: 'TINUBU ESTABLISHES NATIONAL HEALTH TECHNOLOGY & DATA ANALYTICS OFFICE, APPOINTS DR. OBI ADIGWE AS PIONEER COORDINATOR',
+    excerpt: 'President Bola Ahmed Tinubu has approved the establishment of the National Health Technology and Data Analytics Office (NHTDAO), a landmark initiative aimed at accelerating Nigeria\'s transition to a fully digital, data-driven healthcare system.',
+    content: `Abuja, Nigeria — President Bola Ahmed Tinubu has approved the establishment of the National Health Technology and Data Analytics Office (NHTDAO), a landmark initiative aimed at accelerating Nigeria's transition to a fully digital, data-driven healthcare system.
+
+The newly created office will operate under the supervision of the Office of the Coordinating Minister of Health and Social Welfare and has Dr. Obi Adigwe as its pioneer National Coordinator.
+
+DRIVING NIGERIA'S DIGITAL HEALTH REVOLUTION
+The NHTDAO is designed to serve as Nigeria's central coordinating platform for digital health, bringing together public and private healthcare institutions under a unified national framework.
+
+Among its core responsibilities are:
+- Driving Nigeria's national digital health agenda.
+- Coordinating and harmonizing healthcare data systems nationwide.
+- Implementing the National Digital Health Architecture, approved by the National Council on Health in November 2025.
+- Supporting—not replacing—the statutory responsibilities of existing health institutions and agencies.
+- Building a secure, interoperable, technology-driven healthcare ecosystem capable of improving healthcare delivery and patient outcomes across the country.
+
+The initiative aligns with President Tinubu's Renewed Hope Agenda, which prioritizes innovation, efficiency, and improved public service delivery through technology.
+
+WHY DR. OBI ADIGWE?
+Dr. Obi Adigwe brings extensive experience in health innovation, pharmaceutical research, artificial intelligence, and technology-driven healthcare reforms.
+
+Before this appointment, he served as the Director-General and Chief Executive Officer of the National Institute for Pharmaceutical Research and Development (NIPRD), where he spearheaded several groundbreaking initiatives.
+
+His achievements include:
+- Promoting translational research, technology transfer, and AI applications in healthcare.
+- Securing a ¥300 million nanotechnology research grant.
+- Facilitating an Afreximbank grant that established Africa's first Active Pharmaceutical Ingredients (API) training facility.
+- Leading the world's first rigorous scientific evaluation that challenged efficacy claims surrounding the Covid Organics herbal preparation during the COVID-19 pandemic.
+
+A NEW ERA FOR NIGERIAN HEALTHCARE
+The creation of the National Health Technology and Data Analytics Office represents one of Nigeria's most significant institutional reforms in digital healthcare.
+
+Experts believe that integrating health technology, standardized medical data, and artificial intelligence into healthcare administration could improve disease surveillance, strengthen policy formulation, enhance patient care, reduce inefficiencies, and modernize healthcare delivery nationwide.
+
+If successfully implemented, the NHTDAO could become the backbone of Nigeria's journey toward a smarter, more connected, and data-driven health system.
+
+📰 THE NATION'S EYES NEWSPAPER
+Seeing Beyond the Headlines, Telling the Truth Others Won't.`,
+    author: 'Noel Chiagorom',
+    date: '2026-06-26',
+    category: Category.POLITICS,
+    imageUrl: 'https://i.ibb.co/bpccfFk/729099260-1022508120727011-6416221811179002217-n.jpg',
+    readTime: '4 min',
+    status: 'published'
+  },
+  {
+    id: 'politics-tinubu-nimc-act-2026',
+    title: 'TINUBU SIGNS NIMC ACT 2026 INTO LAW, USHERS IN NEW ERA OF DIGITAL IDENTITY',
+    excerpt: 'President Bola Ahmed Tinubu has signed the National Identity Management Commission (NIMC) Act, 2026 into law, describing it as a landmark reform that will transform Nigeria\'s identity management system.',
+    content: `President Bola Ahmed Tinubu has signed the National Identity Management Commission (NIMC) Act, 2026 into law, describing it as a landmark reform that will transform Nigeria's identity management system and strengthen the country's digital economy.
+
+Announcing the development, President Tinubu said Nigeria's identity framework had operated for nearly two decades under legislation designed for a different era, stressing that the new law provides a modern, secure, inclusive, and technology-driven identity system capable of supporting the nation's ambition of becoming a $1 trillion economy.
+
+A NEW DIGITAL PUBLIC INFRASTRUCTURE
+According to the President, the new Act positions the National Identity Management Commission (NIMC) at the centre of Nigeria's Digital Public Infrastructure (DPI) and National Public Key Infrastructure (PKI), enabling secure identity verification, digital signatures, trusted online transactions, and expanded digital services across the country.
+
+One of the major highlights of the legislation is its stronger protection of citizens' personal data. The President explained that personal information can no longer be accessed indiscriminately or used outside the purpose for which it was collected without consent or due legal process.
+
+"The privacy of Nigerians must be protected, and this law makes that clear," Tinubu stated.
+
+NIN AS THE GATEWAY TO ESSENTIAL SERVICES
+Under the new legal framework, the National Identification Number (NIN) will become the principal gateway for accessing numerous essential services, including passport issuance, voter registration, banking, land transactions, telecommunications, pensions, insurance, tax payments, consumer credit, and various government services.
+
+The President summarized the vision of the new identity system with the phrase:
+"One person. One identity. One number."
+
+INCLUSION FOR ALL
+President Tinubu further disclosed that he specifically directed that the law must guarantee inclusion for vulnerable populations, underserved communities, and Nigerians living in the Diaspora, ensuring that no citizen is excluded from opportunities because of the absence of a trusted national identity.
+
+The Act also introduces significant governance reforms within NIMC by expanding representation on its governing board, improving institutional accountability, and prescribing stiffer penalties for identity theft, multiple registrations, unauthorized access to identity databases, and other forms of abuse.
+
+The President warned that his administration would not tolerate individuals or organizations that forge identities, steal citizens' identities, or attempt to manipulate the national identity system.
+
+He commended the National Assembly, the Honourable Minister of Interior, the management of NIMC, development partners, and Nigerians whose contributions made the enactment of the legislation possible.
+
+Tinubu described the new law as another major milestone under his administration's Renewed Hope Agenda, saying it lays the foundation for a more secure, digitally connected, inclusive, and prosperous Nigeria.
+
+Editor's Note
+The signing of the NIMC Act 2026 represents one of Nigeria's most significant digital governance reforms in recent years. If effectively implemented, the law has the potential to improve service delivery, reduce identity fraud, strengthen cybersecurity, promote financial inclusion, and support the country's growing digital economy. Its ultimate success, however, will depend on transparent implementation, robust data protection, and ensuring that every Nigerian—regardless of location or social status—can obtain and use a trusted digital identity.
+
+✒️ By Noel Chiagorom — THE NATION'S EYES NEWSPAPER
+Seeing Beyond the Headlines, Telling the Truth Others Won't.`,
+    author: 'Noel Chiagorom',
+    date: '2026-06-26',
+    category: Category.POLITICS,
+    imageUrl: 'https://i.ibb.co/qL7bxM5V/732637476-1045800404596431-670640938726257124-n.jpg',
+    readTime: '5 min',
+    status: 'published'
+  },
+  {
     id: 'politics-shettima-northern-governors-education-2026',
     title: 'Shettima, Northern Governors Seek Greater Investment in Education, Human Capital Development',
     excerpt: 'Nigeria\'s Vice President, Kashim Shettima, alongside governors from the northern states, has called for increased investment in education, healthcare, and skills development as a critical strategy for improving human capital across Northern Nigeria.',
