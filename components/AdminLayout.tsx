@@ -4,7 +4,8 @@ import { Link, useLocation, Navigate } from 'react-router-dom';
 import { onAuthStateChanged, User as FirebaseUser, signOut } from 'firebase/auth';
 import { auth } from '../firebase';
 
-const ADMIN_EMAIL = import.meta.env.VITE_ADMIN_EMAIL || 'netbiz0925@gmail.com';
+const ADMIN_EMAILS = (import.meta.env.VITE_ADMIN_EMAIL || 'netbiz0925@gmail.com')
+  .split(',').map(e => e.trim());
 
 export default function AdminLayout({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<FirebaseUser | null>(null);
@@ -35,7 +36,7 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
     );
   }
 
-  if (!user || user.email !== ADMIN_EMAIL) {
+  if (!user || !user.email || !ADMIN_EMAILS.includes(user.email)) {
     return <Navigate to="/adminlogin" state={{ from: location }} replace />;
   }
 

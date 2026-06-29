@@ -5,7 +5,8 @@ import { Helmet } from 'react-helmet-async';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase';
 
-const ADMIN_EMAIL = import.meta.env.VITE_ADMIN_EMAIL || 'netbiz0925@gmail.com';
+const ADMIN_EMAILS = (import.meta.env.VITE_ADMIN_EMAIL || 'netbiz0925@gmail.com')
+  .split(',').map(e => e.trim());
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -22,7 +23,7 @@ const Login: React.FC = () => {
 
     try {
       const result = await signInWithEmailAndPassword(auth, email.trim(), password);
-      if (result.user.email === ADMIN_EMAIL) {
+      if (result.user.email && ADMIN_EMAILS.includes(result.user.email)) {
         navigate('/admin');
       } else {
         setError('Unauthorized account. Admin access is restricted.');
