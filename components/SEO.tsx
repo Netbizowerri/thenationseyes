@@ -14,7 +14,7 @@ interface SEOProps {
   publishedTime?: string;
   modifiedTime?: string;
   section?: string;
-  jsonLd?: Record<string, any>;
+  jsonLd?: Record<string, any> | Record<string, any>[];
 }
 
 const SEO: React.FC<SEOProps> = ({
@@ -70,9 +70,15 @@ const SEO: React.FC<SEOProps> = ({
       )}
 
       {jsonLd && (
-        <script type="application/ld+json">
-          {JSON.stringify(jsonLd)}
-        </script>
+        Array.isArray(jsonLd) ? jsonLd.map((item, i) => (
+          <script key={i} type="application/ld+json">
+            {JSON.stringify(item)}
+          </script>
+        )) : (
+          <script type="application/ld+json">
+            {JSON.stringify(jsonLd)}
+          </script>
+        )
       )}
     </Helmet>
   );

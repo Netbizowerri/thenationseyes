@@ -4,6 +4,7 @@ import { useParams, Link } from 'react-router-dom';
 import { Post, Comment } from '../types';
 import { firebaseService } from '../services/firebaseService';
 import SEO from '../components/SEO';
+import { Helmet } from 'react-helmet-async';
 
 const sanitizeInput = (input: string): string => {
   return input
@@ -124,21 +125,26 @@ const ArticleDetail: React.FC = () => {
 
   const articleJsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@type': 'NewsArticle',
     headline: post.title,
     description: post.excerpt,
     image: post.imageUrl,
     author: {
       '@type': 'Person',
       name: post.author,
+      url: post.author === "The Nation's Eyes News Desk"
+        ? 'https://thenationseyes.com/about'
+        : 'https://thenationseyes.com/about',
+      description: 'Journalist and Publisher at The Nation\'s Eyes Newspaper',
     },
     publisher: {
       '@type': 'Organization',
       name: "The Nation's Eyes",
       logo: {
         '@type': 'ImageObject',
-        url: 'https://thenationseyes.com/logo.png',
+        url: 'https://i.ibb.co/5Wn1FsYc/THE-NATION-S-EYES-18.jpg',
       },
+      url: 'https://thenationseyes.com',
     },
     datePublished: post.date,
     dateModified: post.date,
@@ -146,6 +152,39 @@ const ArticleDetail: React.FC = () => {
       '@type': 'WebPage',
       '@id': `https://thenationseyes.com/post/${post.id}`,
     },
+    articleSection: post.category,
+    keywords: [post.category, 'Nigeria', 'news', 'Nigerian news'],
+    inLanguage: 'en-US',
+    copyrightYear: new Date(post.date).getFullYear(),
+    isAccessibleForFree: true,
+    hasPart: {
+      '@type': 'WebPageElement',
+      isAccessibleForFree: true,
+    },
+  };
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://thenationseyes.com/',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: post.category,
+        item: `https://thenationseyes.com/category/${post.category}`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: post.title,
+      },
+    ],
   };
 
   return (
@@ -161,6 +200,17 @@ const ArticleDetail: React.FC = () => {
         section={post.category}
         jsonLd={articleJsonLd}
       />
+      <Helmet>
+        <meta property="article:tag" content={post.category} />
+        <meta property="article:tag" content="Nigeria" />
+        <meta name="twitter:label1" content="Category" />
+        <meta name="twitter:data1" content={post.category} />
+        <meta name="twitter:label2" content="Author" />
+        <meta name="twitter:data2" content={post.author} />
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbJsonLd)}
+        </script>
+      </Helmet>
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 xl:gap-20">
         
         {/* Main Content Column (75%) */}

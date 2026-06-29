@@ -13,6 +13,9 @@ import AdminPosts from './pages/AdminPosts';
 import AdminComments from './pages/AdminComments';
 import Login from './pages/Login';
 import About from './pages/About';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
+import Disclaimer from './pages/Disclaimer';
 import NotFound from './pages/NotFound';
 
 const App: React.FC = () => {
@@ -28,6 +31,9 @@ const App: React.FC = () => {
             <Route path="/category/:categoryName" element={<PublicLayout><Home /></PublicLayout>} />
             <Route path="/post/:id" element={<PublicLayout><ArticleDetail /></PublicLayout>} />
             <Route path="/about" element={<PublicLayout><About /></PublicLayout>} />
+            <Route path="/privacy-policy" element={<PublicLayout><PrivacyPolicy /></PublicLayout>} />
+            <Route path="/terms-of-service" element={<PublicLayout><TermsOfService /></PublicLayout>} />
+            <Route path="/disclaimer" element={<PublicLayout><Disclaimer /></PublicLayout>} />
             <Route path="/adminlogin" element={<Login />} />
             <Route path="/admin" element={<AdminLayout><AdminDashboard /></AdminLayout>} />
             <Route path="/admin/posts" element={<AdminLayout><AdminPosts /></AdminLayout>} />

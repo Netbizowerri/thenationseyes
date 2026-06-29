@@ -96,7 +96,27 @@ const Home: React.FC = () => {
     ? `Latest ${categoryName} news, analysis, and opinion from The Nation's Eyes. In-depth reporting on Nigerian ${categoryName.toLowerCase()} matters.`
     : "The Nation's Eyes delivers in-depth Nigerian news, political analysis, and editorial commentary. Unveiling truths, shaping perspectives.";
 
-  const jsonLd = {
+  const organizationJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: "The Nation's Eyes",
+    url: 'https://thenationseyes.com',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://i.ibb.co/5Wn1FsYc/THE-NATION-S-EYES-18.jpg',
+    },
+    foundingDate: '2025',
+    description: 'Independent Nigerian newspaper delivering fearless reporting and editorial commentary.',
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'NG',
+    },
+    sameAs: [
+      'https://web.facebook.com/noel.chiagorom',
+    ],
+  };
+
+  const websiteJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: "The Nation's Eyes",
@@ -104,8 +124,14 @@ const Home: React.FC = () => {
     description: "Nigerian news, politics, and editorial analysis.",
     potentialAction: {
       '@type': 'SearchAction',
-      target: 'https://thenationseyes.com/?s={search_term_string}',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: 'https://thenationseyes.com/?s={search_term_string}',
+      },
       'query-input': 'required name=search_term_string',
+    },
+    publisher: {
+      '@id': 'https://thenationseyes.com/#organization',
     },
   };
 
@@ -118,7 +144,8 @@ const Home: React.FC = () => {
         description={seoDesc}
         path={isCategory ? `/category/${categoryName}` : '/'}
         type="website"
-        jsonLd={jsonLd}
+        image="https://i.ibb.co/5Wn1FsYc/THE-NATION-S-EYES-18.jpg"
+        jsonLd={[organizationJsonLd, websiteJsonLd]}
       />
 
       {/* Hero Slider */}

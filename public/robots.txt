@@ -3,10 +3,36 @@ Allow: /
 Allow: /post/
 Allow: /category/
 Allow: /about
+Allow: /privacy-policy
+Allow: /terms-of-service
+Allow: /disclaimer
 
+# Admin section - block crawlers
 Disallow: /admin
 Disallow: /admin/
 Disallow: /adminlogin
 Disallow: /login
+
+# AI crawler directives (GEO - Generative Engine Optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
 
 Sitemap: https://thenationseyes.com/sitemap.xml

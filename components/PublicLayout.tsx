@@ -38,8 +38,14 @@ export default function PublicLayout({ children }: { children: ReactNode }) {
             <h2 className="text-3xl md:text-4xl font-[900] mb-4 tracking-tighter text-white">THE NATION'S EYES</h2>
           </Link>
           <p className="text-slate-400 mb-6 max-w-md mx-auto italic text-base md:text-lg font-light">"Unveiling truths, shaping perspectives."</p>
-          <div className="flex justify-center space-x-6 mb-10">
-            <Link to="/about" className="text-xs font-black uppercase tracking-widest text-slate-500 hover:text-red-600 transition-colors no-underline">About The Publisher</Link>
+          <div className="flex justify-center gap-x-6 gap-y-2 mb-10 flex-wrap">
+            <Link to="/about" className="text-xs font-black uppercase tracking-widest text-slate-500 hover:text-red-600 transition-colors no-underline">About</Link>
+            <span className="text-slate-800">|</span>
+            <Link to="/privacy-policy" className="text-xs font-black uppercase tracking-widest text-slate-500 hover:text-red-600 transition-colors no-underline">Privacy Policy</Link>
+            <span className="text-slate-800">|</span>
+            <Link to="/terms-of-service" className="text-xs font-black uppercase tracking-widest text-slate-500 hover:text-red-600 transition-colors no-underline">Terms of Service</Link>
+            <span className="text-slate-800">|</span>
+            <Link to="/disclaimer" className="text-xs font-black uppercase tracking-widest text-slate-500 hover:text-red-600 transition-colors no-underline">Disclaimer</Link>
             <span className="text-slate-800">|</span>
             <Link to="/" className="text-xs font-black uppercase tracking-widest text-slate-500 hover:text-red-600 transition-colors no-underline">Home</Link>
           </div>

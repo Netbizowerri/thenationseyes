@@ -39,12 +39,13 @@ export default function MobileMenuTray({ isOpen, onClose, onSearchOpen }: Mobile
         aria-label="Navigation menu"
       >
         <div className="p-6 border-b border-slate-100 flex items-center justify-between bg-slate-50">
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-red-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-red-200">
-              <i className="fas fa-eye"></i>
-            </div>
-            <span className="font-black text-slate-900 tracking-tighter text-lg uppercase">The Nation's Eyes</span>
-          </div>
+          <Link to="/" onClick={onClose} className="block no-underline">
+            <img
+              src="https://i.ibb.co/5Wn1FsYc/THE-NATION-S-EYES-18.jpg"
+              alt="The Nation's Eyes"
+              className="h-12 w-auto"
+            />
+          </Link>
           <button onClick={onClose} className="w-10 h-10 flex items-center justify-center rounded-full bg-white border border-slate-100 text-slate-400 hover:text-red-600 hover:border-red-100 transition-all active:scale-90" aria-label="Close menu">
             <i className="fas fa-times"></i>
           </button>
