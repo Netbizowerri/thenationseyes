@@ -1628,5 +1628,185 @@ Seeing Beyond the Headlines, Telling the Truth Others Won't.`,
     imageUrl: 'https://i.ibb.co/Tq8DBLYq/Screenshot-2026-03-30-093039.png',
     readTime: '4 min',
     status: 'published'
+  },
+  {
+    id: 'economy-enugu-airport-concession-aero-alliance-2026',
+    title: 'FG Concessions Enugu International Airport to Aero Alliance for 30 Years',
+    excerpt: 'The Federal Government has officially concessioned the Akanu Ibiam International Airport to Aero Alliance Limited under a 30-year Public-Private Partnership (PPP) agreement aimed at modernising the airport, improving operational efficiency, and expanding regional connectivity.',
+    content: `The Federal Government has officially concessioned the Akanu Ibiam International Airport to Aero Alliance Limited under a 30-year Public-Private Partnership (PPP) agreement aimed at modernising the airport, improving operational efficiency, and expanding regional connectivity.
+
+The concession forms part of the Federal Government's ongoing efforts to attract private investment into Nigeria's aviation sector while maintaining public ownership of key national infrastructure.
+
+Under the agreement, Aero Alliance Limited will undertake the upgrade of the airport's terminal facilities, enhance operational efficiency, improve passenger services, and strengthen the airport's capacity to serve as a major aviation hub in the South-East and beyond.
+
+Despite the concession, the Federal Government will retain ownership of the airport throughout the duration of the agreement. The Federal Airports Authority of Nigeria will continue to oversee regulatory responsibilities, while all existing airport workers will remain employees of FAAN, ensuring that no staff lose their employment as a result of the partnership.
+
+Government officials said the arrangement is designed to improve infrastructure, increase efficiency, attract greater investment, and deliver better services to passengers while preserving the country's ownership of the strategic asset.
+
+KEY FACTS
+Airport: Akanu Ibiam International Airport
+Concessionaire: Aero Alliance Limited
+Duration: 30 years
+Ownership: Remains with the Federal Government of Nigeria
+Objective: Modernise infrastructure, improve efficiency, and expand regional connectivity
+Workers: Existing staff remain employees of Federal Airports Authority of Nigeria
+
+The concession is expected to enhance passenger experience, boost economic activities in the South-East, and strengthen Nigeria's aviation infrastructure through greater private sector participation.
+
+Editor's Note: The concession of Akanu Ibiam International Airport reflects the Federal Government's continued use of public-private partnerships to modernise critical infrastructure. While the airport remains publicly owned, the long-term success of the arrangement will depend on effective oversight, transparency, sustained investment, and improved service delivery for passengers.
+
+✒️ By Noel Chiagorom — THE NATION'S EYES NEWSPAPER
+Seeing Beyond the Headlines, Telling the Truth Others Won't.`,
+    author: 'Noel Chiagorom',
+    date: '2026-06-29',
+    category: Category.ECONOMY,
+    imageUrl: 'https://i.ibb.co/F4Yd4vk5/The-Nation-s-Eyes-12.jpg',
+    readTime: '3 min',
+    status: 'published'
+  },
+  {
+    id: 'economy-mtn-employees-shares-insider-buying-2026',
+    title: 'MTN Employees, Executives Invest Over ₦1.14bn in Company Shares as Confidence Grows',
+    excerpt: 'Leading telecommunications company, MTN Nigeria, has witnessed another strong vote of confidence from within its ranks as employees and senior executives invested more than ₦1.14 billion in the company\'s shares through a series of insider acquisitions and share vesting transactions.',
+    content: `Leading telecommunications company, MTN Nigeria, has witnessed another strong vote of confidence from within its ranks as employees and senior executives invested more than ₦1.14 billion in the company's shares through a series of insider acquisitions and share vesting transactions.
+
+According to regulatory disclosures filed with the Nigerian Exchange (NGX), MTN Nigeria's Employee Share Acquisition Trust purchased 1,233,299 ordinary shares in multiple tranches at a combined value of ₦921,865,752.
+
+The transaction underscores growing confidence among employees in the company's long-term growth prospects and financial strength.
+
+In a separate insider transaction, the company's Chief Financial Officer, Modupe Kadri, increased his direct equity holding by acquiring 275,309 ordinary shares worth more than ₦218.9 million.
+
+The telecom giant also completed the transfer of 129,129 ordinary shares to six employees under its Employee Share Ownership Plan and Performance Share Plan, following earlier share vesting exercises involving senior executives. The initiative forms part of MTN Nigeria's long-term incentive programme aimed at rewarding performance while aligning employees' interests with those of shareholders.
+
+The latest acquisitions come on the heels of MTN Nigeria's impressive financial performance, including a sharp increase in its first-quarter 2026 pre-tax profit, reinforcing investor optimism about the company's future earnings potential.
+
+Market analysts say insider buying is often regarded as a positive signal because it suggests that those with the deepest knowledge of a company's operations believe its shares still offer attractive long-term value.
+
+The recent transactions also reflect MTN Nigeria's continued commitment to employee ownership, corporate governance, and sustainable value creation for shareholders.
+
+With management and employees increasing their stakes in the company, investors will be closely watching MTN Nigeria's performance in the coming quarters as the telecommunications giant continues to strengthen its position in Nigeria's digital economy.
+
+Editor's Note: Insider share purchases are generally viewed by investors as a sign of confidence in a company's future. While they do not guarantee future stock performance, they often indicate that executives and employees believe the business is well-positioned for sustained growth.
+
+✒️ By Noel Chiagorom — THE NATION'S EYES NEWSPAPER
+Seeing Beyond the Headlines, Telling the Truth Others Won't.`,
+    author: 'Noel Chiagorom',
+    date: '2026-06-29',
+    category: Category.ECONOMY,
+    imageUrl: 'https://i.ibb.co/mrCMYDfV/The-Nation-s-Eyes-13.jpg',
+    readTime: '4 min',
+    status: 'published'
+  },
+  {
+    id: 'world-article-5-iran-us-mou-strait-hormuz-2026',
+    title: 'ARTICLE 5 OF U.S.-IRAN MOU AT CENTRE OF STRAIT OF HORMUZ CRISIS',
+    excerpt: 'The controversial Article 5 of the June 2026 Memorandum of Understanding between the United States and Iran has emerged as a major flashpoint in the renewed military tensions across the Strait of Hormuz, with both countries accusing each other of violating the agreement.',
+    content: `The controversial Article 5 of the June 2026 Memorandum of Understanding (MoU) between the United States and Iran has emerged as a major flashpoint in the renewed military tensions across the Strait of Hormuz, with both countries accusing each other of violating the agreement.
+
+The provision requires Iran to use its "best efforts" to ensure the safe, toll-free passage of commercial vessels through the strategic waterway during a 60-day interim ceasefire. It also obliges Tehran to remove military obstacles to navigation and engage Oman in discussions on the future management of the strait.
+
+However, analysts say the agreement's vague language has created conflicting interpretations that have fuelled a dangerous cycle of confrontation.
+
+Iran insists that commercial vessels should coordinate their movements with the Islamic Revolutionary Guard Corps (IRGC), arguing that such coordination is necessary for it to fulfil its security obligations under Article 5. The United States, on the other hand, maintains that the Strait of Hormuz is an international waterway and that ships are not required to seek Iranian authorization before transit.
+
+The disagreement has reportedly resulted in attacks on commercial vessels, followed by retaliatory U.S. military strikes, further escalating tensions in one of the world's most important oil shipping routes. Observers warn that unless the disputed provision is clarified, the ceasefire could unravel completely.
+
+Despite the latest hostilities, both Washington and Tehran have agreed to temporarily halt further military attacks and resume diplomatic negotiations in Doha, Qatar. The emergency talks are expected to focus primarily on clarifying Article 5 and establishing mutually acceptable rules governing maritime traffic through the Strait of Hormuz.
+
+Security experts describe the June 2026 MoU as a temporary de-escalation framework rather than a permanent peace agreement, noting that several contentious issues — including maritime security, sanctions relief, and Iran's nuclear programme — remain unresolved.
+
+Editor's Note: The Strait of Hormuz handles a significant share of the world's seaborne oil exports. Any prolonged disruption to navigation through the strategic waterway could have serious implications for global energy supplies, international trade, and oil prices.
+
+✒️ By The Nation's Eyes News Desk — THE NATION'S EYES NEWSPAPER
+Seeing Beyond the Headlines, Telling the Truth Others Won't.`,
+    author: 'The Nation\'s Eyes News Desk',
+    date: '2026-06-29',
+    category: Category.WORLD,
+    imageUrl: 'https://i.ibb.co/nss24LSk/The-Nation-s-Eyes-14.jpg',
+    readTime: '4 min',
+    status: 'published'
+  },
+  {
+    id: 'economy-alake-solid-minerals-reforms-investment-2026',
+    title: 'Dele Alake\'s Solid Minerals Reforms Attract Over $3 Billion Investment, Target Economic Diversification',
+    excerpt: 'Nigeria\'s solid minerals sector is undergoing one of its most ambitious reforms under the leadership of the Minister of Solid Minerals Development, Dele Alake, as the Federal Government seeks to diversify the economy, reduce dependence on crude oil, and maximize revenue from the nation\'s vast mineral resources.',
+    content: `Nigeria's solid minerals sector is undergoing one of its most ambitious reforms under the leadership of the Minister of Solid Minerals Development, Dele Alake, as the Federal Government seeks to diversify the economy, reduce dependence on crude oil, and maximize revenue from the nation's vast mineral resources.
+
+A cornerstone of the reform agenda is the policy requiring local value addition before the export of strategic minerals. Rather than allowing raw minerals such as high-grade lithium to leave the country unprocessed, the government now encourages investors to establish processing plants within Nigeria. This policy has reportedly attracted more than $3 billion in new investments while creating thousands of jobs across the mining value chain.
+
+To improve transparency and eliminate speculative practices, the ministry has undertaken a comprehensive overhaul of mining licenses. Through a digitized licensing system, more than 3,000 dormant mining licenses have been revoked, making room for credible investors genuinely committed to developing Nigeria's mineral resources.
+
+The government has also intensified efforts to tackle illegal mining, which has long deprived Nigeria of substantial revenue. Special Mining Marshals have been deployed nationwide, resulting in over 300 arrests and several successful prosecutions. At the same time, authorities have focused on formalizing artisanal mining by organizing local miners into more than 250 registered cooperatives, enabling them to operate legally while improving safety and regulatory compliance.
+
+Recognizing that reliable geological data is critical for attracting long-term investment, the Federal Government is pursuing ₦1 trillion in funding for nationwide mineral exploration. In addition, it has launched the Early-Stage Mineral Exploration and Research Grant Endowment (EMERGE), a merit-based initiative designed to strengthen geoscientific research and expand knowledge of Nigeria's mineral deposits.
+
+Nigeria's reforms have also strengthened its influence across Africa. The country now chairs the African Mineral Strategy Group (AMSG), a continental alliance advocating for fairer mineral trade arrangements, increased local processing, and greater value retention within African economies.
+
+The ongoing reforms reflect the Federal Government's broader strategy of transforming the mining sector into a major contributor to national economic growth, employment generation, industrialization, and foreign exchange earnings while positioning Nigeria as a leading player in Africa's critical minerals industry.
+
+Editor's Note: The success of these reforms will ultimately depend on consistent implementation, stronger enforcement against illegal mining, and sustained investor confidence. If maintained, Nigeria's solid minerals sector could become one of the country's most significant non-oil revenue sources and a key pillar of long-term economic diversification.
+
+✒️ By Noel Chiagorom — THE NATION'S EYES NEWSPAPER
+Seeing Beyond the Headlines, Telling the Truth Others Won't.`,
+    author: 'Noel Chiagorom',
+    date: '2026-06-29',
+    category: Category.ECONOMY,
+    imageUrl: 'https://i.ibb.co/XZcDXGmG/The-Nation-s-Eyes-15.jpg',
+    readTime: '4 min',
+    status: 'published'
+  },
+  {
+    id: 'society-ndlea-canadian-loud-cannabis-apapa-seizure-2026',
+    title: 'NDLEA Intercepts ₦12.4bn Canadian Loud Cannabis at Apapa Port, Busts International Drug Syndicate',
+    excerpt: 'The National Drug Law Enforcement Agency (NDLEA) has recorded one of its biggest anti-drug operations with the interception of a massive 4,959-kilogram shipment of high-potency Canadian Loud cannabis worth an estimated ₦12.397 billion at the Apapa Port in Lagos.',
+    content: `LAGOS, Nigeria — The National Drug Law Enforcement Agency (NDLEA) has recorded one of its biggest anti-drug operations with the interception of a massive 4,959-kilogram shipment of high-potency Canadian Loud cannabis worth an estimated ₦12.397 billion at the Apapa Port in Lagos.
+
+According to the agency, the illicit consignment was concealed inside a 40-foot container alongside two vehicles. Investigations revealed that the shipment originated from Toronto, Canada, and was routed through Morocco before arriving at the Apapa Port in Lagos.
+
+The successful operation dealt a significant blow to international drug trafficking networks seeking to use Nigeria as a transit and destination point for illicit narcotics.
+
+In a related development, the NDLEA announced the dismantling of an international drug syndicate that allegedly specialized in planting illegal drugs in the luggage of unsuspecting airline passengers, exposing innocent travelers to the risk of wrongful arrest abroad.
+
+The agency also confirmed the arrest of a 38-year-old businesswoman at the Murtala Muhammed International Airport (MMIA), Lagos, while she allegedly attempted to smuggle 7.5 kilograms of cocaine.
+
+The NDLEA reaffirmed its commitment to intensifying intelligence-led operations across the country's seaports, airports, and land borders to combat drug trafficking and dismantle criminal networks.
+
+The agency urged members of the public to remain vigilant and continue providing credible intelligence that would assist security agencies in the fight against illicit drug trafficking and organized crime.
+
+Editor's Note: The seizure highlights the growing sophistication of international drug trafficking networks and underscores the importance of sustained intelligence gathering, inter-agency cooperation, and strict border security in protecting Nigeria from transnational organized crime.
+
+✒️ By Noel Chiagorom — THE NATION'S EYES NEWSPAPER
+Seeing Beyond the Headlines, Telling the Truth Others Won't.`,
+    author: 'Noel Chiagorom',
+    date: '2026-06-29',
+    category: Category.SOCIETY,
+    imageUrl: 'https://i.ibb.co/NMh9vYq/The-Nation-s-Eyes-16.jpg',
+    readTime: '4 min',
+    status: 'published'
+  },
+  {
+    id: 'politics-oshiomhole-death-penalty-kidnappers-bandits-edo-2026',
+    title: 'Oshiomhole Backs Death Penalty for Kidnappers, Bandits in Edo',
+    excerpt: 'Former Edo State Governor and Senator, Adams Oshiomhole, has thrown his weight behind the Edo State Government\'s tough stance against kidnapping and banditry, expressing support for the death penalty for convicted kidnappers and bandits.',
+    content: `Former Edo State Governor and Senator, Adams Oshiomhole, has thrown his weight behind the Edo State Government's tough stance against kidnapping and banditry, expressing support for the death penalty for convicted kidnappers and bandits.
+
+Oshiomhole said the growing insecurity in parts of the country demands stronger legal measures to deter criminals who terrorize communities, abduct innocent citizens, and undermine public safety. He argued that individuals found guilty of such heinous crimes should face the maximum punishment provided by law.
+
+His position aligns with the administration of Monday Okpebholo, which has adopted a hardline approach to tackling insecurity in Edo State. The state government has maintained that decisive action is necessary to curb the rising menace of kidnapping and violent crimes.
+
+The endorsement by Oshiomhole adds political support to the Edo Government's security agenda, although the issue of capital punishment remains a subject of legal, constitutional, and human rights debate in Nigeria. Supporters argue that harsher penalties could deter criminals, while critics contend that strengthening law enforcement, ensuring swift prosecution, and improving the justice system are equally essential in combating insecurity.
+
+As the debate continues, the Edo State Government has reiterated its commitment to protecting residents and restoring peace through a combination of legislative reforms and enhanced security operations.
+
+Editor's Note: The renewed call for the death penalty reflects growing public frustration over worsening insecurity. Whether capital punishment proves to be an effective deterrent remains a matter of debate, but there is broad agreement that efficient policing, intelligence gathering, and a credible justice system are indispensable in the fight against kidnapping and banditry.
+
+✒️ By Noel Chiagorom — THE NATION'S EYES NEWSPAPER
+Seeing Beyond the Headlines, Telling the Truth Others Won't.`,
+    author: 'Noel Chiagorom',
+    date: '2026-06-29',
+    category: Category.POLITICS,
+    imageUrl: 'https://i.ibb.co/Swjrnf0z/The-Nation-s-Eyes-17.jpg',
+    readTime: '3 min',
+    status: 'published'
   }
 ];
