@@ -15,6 +15,8 @@ const AdminPosts: React.FC = () => {
   const [showAiPanel, setShowAiPanel] = useState(false);
   const [isUploadingImage, setIsUploadingImage] = useState(false);
   const [imageUploadError, setImageUploadError] = useState('');
+  const [saving, setSaving] = useState(false);
+  const [saveError, setSaveError] = useState('');
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -57,10 +59,18 @@ const AdminPosts: React.FC = () => {
   };
 
   const savePost = async () => {
-    if (editingPost && editingPost.title) {
+    if (!editingPost || !editingPost.title) return;
+    setSaving(true);
+    setSaveError('');
+    try {
       await firebaseService.savePost(editingPost as Post);
       setEditingPost(null);
       setIsEditorOpen(false);
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : 'Failed to save post. Check the browser console for details.';
+      setSaveError(msg);
+    } finally {
+      setSaving(false);
     }
   };
 
@@ -259,10 +269,10 @@ const AdminPosts: React.FC = () => {
               </button>
               <button
                 onClick={savePost}
-                disabled={!editingPost.title?.trim()}
-                className="bg-red-600 text-white px-6 py-2 rounded-lg font-bold text-sm hover:bg-red-700 disabled:opacity-40 disabled:cursor-not-allowed transition-colors shadow-sm"
+                disabled={!editingPost.title?.trim() || saving}
+                className="bg-red-600 text-white px-6 py-2 rounded-lg font-bold text-sm hover:bg-red-700 disabled:opacity-40 disabled:cursor-not-allowed transition-colors shadow-sm flex items-center gap-2"
               >
-                <i className="fas fa-check mr-2"></i>Publish
+                {saving ? <><i className="fas fa-spinner fa-spin"></i>Saving...</> : <><i className="fas fa-check"></i>Publish</>}
               </button>
             </div>
           </div>
@@ -508,12 +518,18 @@ const AdminPosts: React.FC = () => {
 
                 {/* Quick Actions */}
                 <div className="space-y-2">
+                  {saveError && (
+                    <div className="p-3 bg-red-50 text-red-600 text-xs rounded-lg border border-red-100 flex items-start gap-2">
+                      <i className="fas fa-exclamation-circle mt-0.5 flex-shrink-0"></i>
+                      <span>{saveError}</span>
+                    </div>
+                  )}
                   <button
                     onClick={savePost}
-                    disabled={!editingPost.title?.trim()}
-                    className="w-full bg-red-600 text-white p-3 rounded-lg font-bold text-sm hover:bg-red-700 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+                    disabled={!editingPost.title?.trim() || saving}
+                    className="w-full bg-red-600 text-white p-3 rounded-lg font-bold text-sm hover:bg-red-700 disabled:opacity-40 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2"
                   >
-                    <i className="fas fa-check mr-2"></i>Save Article
+                    {saving ? <><i className="fas fa-spinner fa-spin"></i>Saving...</> : <><i className="fas fa-check"></i>Save Article</>}
                   </button>
                   <button
                     onClick={() => { setIsEditorOpen(false); setEditingPost(null); }}
