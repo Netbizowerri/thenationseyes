@@ -1,7 +1,7 @@
 {
   "projectId": "nationseyes",
   "appId": "1:778262972365:web:53883e94789af945466684",
-  "apiKey": "AIzaSyAMWvegTyKKso_Fa-AzCEJSnEeWC4y7sUc",
+  "apiKey": "REPLACE_WITH_YOUR_API_KEY",
   "authDomain": "nationseyes.firebaseapp.com",
   "storageBucket": "nationseyes.firebasestorage.app",
   "messagingSenderId": "778262972365"
