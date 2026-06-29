@@ -8,6 +8,7 @@ export interface Post {
   date: string;
   category: string;
   imageUrl: string;
+  videoUrl?: string;
   readTime: string;
   status: 'published' | 'draft';
 }

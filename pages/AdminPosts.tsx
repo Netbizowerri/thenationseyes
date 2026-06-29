@@ -17,6 +17,7 @@ const AdminPosts: React.FC = () => {
   const [imageUploadError, setImageUploadError] = useState('');
   const [saving, setSaving] = useState(false);
   const [saveError, setSaveError] = useState('');
+  const [statusFilter, setStatusFilter] = useState<'all' | 'published' | 'draft'>('all');
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -85,6 +86,7 @@ const AdminPosts: React.FC = () => {
       content: '',
       category: Category.EDITORIAL,
       imageUrl: '',
+      videoUrl: '',
       readTime: '5 min'
     } as Post);
     setIsEditorOpen(true);
@@ -158,6 +160,23 @@ const AdminPosts: React.FC = () => {
         </div>
       </div>
 
+      {/* Status Filter */}
+      <div className="flex items-center gap-2">
+        {(['all', 'published', 'draft'] as const).map(s => (
+          <button
+            key={s}
+            onClick={() => setStatusFilter(s)}
+            className={`px-4 py-1.5 rounded-lg text-xs font-bold border transition-colors ${
+              statusFilter === s
+                ? 'bg-red-600 text-white border-red-600'
+                : 'bg-white text-slate-500 border-slate-200 hover:bg-slate-50'
+            }`}
+          >
+            {s === 'all' ? 'All' : s.charAt(0).toUpperCase() + s.slice(1)}
+          </button>
+        ))}
+      </div>
+
       <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
         <table className="w-full text-left">
           <thead className="bg-slate-50 border-b border-slate-200">
@@ -170,7 +189,9 @@ const AdminPosts: React.FC = () => {
             </tr>
           </thead>
           <tbody className="divide-y divide-slate-100">
-            {posts.map(post => (
+            {posts
+              .filter(p => statusFilter === 'all' || p.status === statusFilter)
+              .map(post => (
               <tr key={post.id} className="hover:bg-slate-50 transition-colors">
                 <td className="px-6 py-4">
                   <div className="flex items-center space-x-4">
@@ -425,6 +446,23 @@ const AdminPosts: React.FC = () => {
                   <p className="text-[10px] text-slate-400">
                     Images are stored as Base64 in Firestore — no Firebase Storage needed.
                     For large images, host on <a href="https://imgbb.com" target="_blank" rel="noopener noreferrer" className="text-red-500 hover:underline">imgbb.com</a> and paste the URL.
+                  </p>
+                </div>
+
+                {/* Video URL */}
+                <div className="space-y-2">
+                  <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider">
+                    <i className="fab fa-youtube mr-2 text-slate-400"></i>Video URL
+                  </label>
+                  <input
+                    type="url"
+                    className="w-full p-2.5 border border-slate-200 rounded-lg outline-none focus:ring-2 focus:ring-red-500 text-xs"
+                    placeholder="https://youtube.com/watch?v=..."
+                    value={editingPost.videoUrl || ''}
+                    onChange={e => setEditingPost({ ...editingPost, videoUrl: e.target.value })}
+                  />
+                  <p className="text-[10px] text-slate-400">
+                    Paste a YouTube video URL to embed in the article.
                   </p>
                 </div>
 

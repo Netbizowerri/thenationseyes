@@ -6,6 +6,18 @@ import { firebaseService } from '../services/firebaseService';
 import SEO from '../components/SEO';
 import { Helmet } from 'react-helmet-async';
 
+const getYoutubeEmbedUrl = (url: string): string | null => {
+  const patterns = [
+    /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([a-zA-Z0-9_-]{11})/,
+    /^([a-zA-Z0-9_-]{11})$/,
+  ];
+  for (const p of patterns) {
+    const m = url.match(p);
+    if (m) return `https://www.youtube.com/embed/${m[1]}`;
+  }
+  return null;
+};
+
 const sanitizeInput = (input: string): string => {
   return input
     .replace(/&/g, '&amp;')
@@ -240,6 +252,23 @@ const ArticleDetail: React.FC = () => {
               <img src={post.imageUrl} className="w-full h-auto min-h-[400px] object-cover rounded-[3rem] shadow-2xl transition-transform duration-700 group-hover:scale-[1.01]" alt={`Featured image for: ${post.title}`} width={1200} height={630} loading="eager" />
               <div className="absolute inset-0 rounded-[3rem] ring-1 ring-inset ring-black/10"></div>
             </div>
+
+            {post.videoUrl && (() => {
+              const embedUrl = getYoutubeEmbedUrl(post.videoUrl);
+              if (!embedUrl) return null;
+              return (
+                <div className="relative mb-16 aspect-video rounded-[3rem] overflow-hidden shadow-2xl">
+                  <iframe
+                    src={embedUrl}
+                    title="YouTube video"
+                    className="w-full h-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    loading="lazy"
+                  />
+                </div>
+              );
+            })()}
 
             <div className="prose prose-xl max-w-none mb-24">
               {renderContent(post.content)}

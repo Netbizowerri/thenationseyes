@@ -68,7 +68,7 @@ const Home: React.FC = () => {
   const topSix = posts.slice(0, 6);
   const remainingPosts = filter === 'All' ? posts : filteredPosts;
 
-  const usedIds = new Set(topSix.map(p => p.id));
+  const usedIds = new Set<string>();
 
   const economySocietyPosts = posts
     .filter(p => !usedIds.has(p.id) && (p.category === Category.ECONOMY || p.category === Category.SOCIETY))
