@@ -36,7 +36,7 @@ export default function NewspaperHeader({ onMenuOpen, onSearchOpen }: NewspaperH
           <div className="flex space-x-12 items-center px-6">
             {latestPosts.length > 0 ? (
               latestPosts.map(post => (
-                <Link key={post.id} to={`/post/${post.id}`} className="text-[10px] font-black tracking-tight text-white uppercase italic hover:text-yellow-300 transition-colors no-underline whitespace-nowrap">
+                <Link key={post.id} to={`/post/${post.slug || post.id}`} className="text-[10px] font-black tracking-tight text-white uppercase italic hover:text-yellow-300 transition-colors no-underline whitespace-nowrap">
                   BREAKING: {post.title} <span className="mx-2 text-white/40 font-normal">|</span> {post.category}
                 </Link>
               ))
@@ -49,7 +49,7 @@ export default function NewspaperHeader({ onMenuOpen, onSearchOpen }: NewspaperH
           <div className="flex space-x-12 items-center px-6" aria-hidden="true">
             {latestPosts.length > 0 ? (
               latestPosts.map(post => (
-                <Link key={`clone-${post.id}`} to={`/post/${post.id}`} className="text-[10px] font-black tracking-tight text-white uppercase italic hover:text-yellow-300 transition-colors no-underline whitespace-nowrap">
+                <Link key={`clone-${post.id}`} to={`/post/${post.slug || post.id}`} className="text-[10px] font-black tracking-tight text-white uppercase italic hover:text-yellow-300 transition-colors no-underline whitespace-nowrap">
                   BREAKING: {post.title} <span className="mx-2 text-white/40 font-normal">|</span> {post.category}
                 </Link>
               ))

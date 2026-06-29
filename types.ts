@@ -9,6 +9,7 @@ export interface Post {
   category: string;
   imageUrl: string;
   videoUrl?: string;
+  slug?: string;
   readTime: string;
   status: 'published' | 'draft';
 }

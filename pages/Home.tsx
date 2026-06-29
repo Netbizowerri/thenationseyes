@@ -9,7 +9,7 @@ import { Link, useParams, useNavigate } from 'react-router-dom';
 import { firebaseService } from '../services/firebaseService';
 
 const CompactArticleCard: React.FC<{ post: Post }> = ({ post }) => (
-  <Link to={`/post/${post.id}`} className="flex group gap-4 items-start no-underline">
+  <Link to={`/post/${post.slug || post.id}`} className="flex group gap-4 items-start no-underline">
     <div className="w-24 h-20 md:w-28 md:h-24 flex-shrink-0 overflow-hidden rounded-md border border-slate-100">
       <img 
         src={post.imageUrl} 

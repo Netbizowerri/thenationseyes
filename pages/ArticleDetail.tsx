@@ -54,11 +54,11 @@ const ArticleDetail: React.FC = () => {
     if (!id) return;
 
     const unsubscribePosts = firebaseService.subscribeToPosts((allPosts) => {
-      const foundPost = allPosts.find(p => p.id === id);
+      const foundPost = allPosts.find(p => (p.slug || p.id) === id);
       if (foundPost) {
         setPost(foundPost);
         const recent = allPosts
-          .filter(p => p.id !== id)
+          .filter(p => (p.slug || p.id) !== id)
           .slice(0, 5);
         setRecentPosts(recent);
       }
@@ -162,7 +162,7 @@ const ArticleDetail: React.FC = () => {
     dateModified: post.date,
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://thenationseyes.com/post/${post.id}`,
+      '@id': `https://thenationseyes.com/post/${post.slug || post.id}`,
     },
     articleSection: post.category,
     keywords: [post.category, 'Nigeria', 'news', 'Nigerian news'],
@@ -204,7 +204,7 @@ const ArticleDetail: React.FC = () => {
       <SEO
         title={post.title}
         description={post.excerpt}
-        path={`/post/${post.id}`}
+        path={`/post/${post.slug || post.id}`}
         image={post.imageUrl}
         type="article"
         author={post.author}
@@ -358,7 +358,7 @@ const ArticleDetail: React.FC = () => {
             </h3>
             <div className="space-y-8">
               {recentPosts.map(rPost => (
-                <Link key={rPost.id} to={`/post/${rPost.id}`} className="group block no-underline">
+                <Link key={rPost.id} to={`/post/${rPost.slug || rPost.id}`} className="group block no-underline">
                   <div className="flex gap-4 items-start">
                     <div className="w-20 h-20 rounded-2xl overflow-hidden flex-shrink-0 shadow-sm group-hover:shadow-md transition-shadow">
                       <img src={rPost.imageUrl} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt={rPost.title} width={80} height={80} loading="lazy" />

@@ -59,12 +59,22 @@ const AdminPosts: React.FC = () => {
     }
   };
 
+  const generateSlug = (title: string): string =>
+    title.toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-|-$/g, '')
+      .slice(0, 100);
+
   const savePost = async () => {
     if (!editingPost || !editingPost.title) return;
     setSaving(true);
     setSaveError('');
     try {
-      await firebaseService.savePost(editingPost as Post);
+      const postToSave = {
+        ...editingPost,
+        slug: generateSlug(editingPost.title),
+      } as Post;
+      await firebaseService.savePost(postToSave);
       setEditingPost(null);
       setIsEditorOpen(false);
     } catch (err) {

@@ -112,7 +112,7 @@ const HeroSlider: React.FC<HeroSliderProps> = ({ posts }) => {
           <span className="inline-block px-4 py-1.5 bg-red-600 text-white text-[9px] md:text-[11px] font-black uppercase tracking-[0.2em] rounded-full mb-4 shadow-2xl">
             {currentPost.category}
           </span>
-          <Link to={`/post/${currentPost.id}`} className="block no-underline">
+          <Link to={`/post/${currentPost.slug || currentPost.id}`} className="block no-underline">
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-[900] text-white mb-4 hover:text-red-500 transition-all duration-300 tracking-tighter leading-[1.1] drop-shadow-2xl line-clamp-2 uppercase">
               {currentPost.title}
             </h2>

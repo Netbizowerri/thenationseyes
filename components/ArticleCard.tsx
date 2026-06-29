@@ -19,7 +19,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ post, isHero }) => {
 
   if (isHero) {
     return (
-      <Link to={`/post/${post.id}`} className="group relative block w-full h-[45vh] md:h-[500px] overflow-hidden rounded-[1.5rem] md:rounded-[2.5rem] shadow-2xl mb-6 md:mb-16 no-underline bg-black">
+      <Link to={`/post/${post.slug || post.id}`} className="group relative block w-full h-[45vh] md:h-[500px] overflow-hidden rounded-[1.5rem] md:rounded-[2.5rem] shadow-2xl mb-6 md:mb-16 no-underline bg-black">
         <img 
           src={post.imageUrl} 
           alt={post.title} 
@@ -64,7 +64,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ post, isHero }) => {
   }
 
   return (
-    <Link to={`/post/${post.id}`} className="group bg-white rounded-[2rem] shadow-sm border border-slate-100 overflow-hidden flex flex-col hover:shadow-2xl hover:shadow-slate-200 transition-all duration-500 hover:-translate-y-2 no-underline">
+    <Link to={`/post/${post.slug || post.id}`} className="group bg-white rounded-[2rem] shadow-sm border border-slate-100 overflow-hidden flex flex-col hover:shadow-2xl hover:shadow-slate-200 transition-all duration-500 hover:-translate-y-2 no-underline">
       <div className="h-48 md:h-64 overflow-hidden relative">
         <img 
           src={post.imageUrl} 

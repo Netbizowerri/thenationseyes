@@ -71,7 +71,8 @@ const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose }) => {
       setSelectedIndex(prev => Math.max(prev - 1, -1));
     }
     if (e.key === 'Enter' && selectedIndex >= 0 && results[selectedIndex]) {
-      window.location.href = `/post/${results[selectedIndex].id}`;
+      const r = results[selectedIndex];
+      window.location.href = `/post/${r.slug || r.id}`;
       onClose();
     }
   };
@@ -178,7 +179,7 @@ const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose }) => {
                 results.map((post, index) => (
                   <Link
                     key={post.id}
-                    to={`/post/${post.id}`}
+                    to={`/post/${post.slug || post.id}`}
                     onClick={onClose}
                     className={`flex items-start gap-4 px-6 py-4 transition-all duration-200 no-underline border-b border-slate-50 last:border-0 ${
                       selectedIndex === index
